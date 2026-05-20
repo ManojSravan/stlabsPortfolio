@@ -297,7 +297,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "1",
     quote:
-      "Manoj brought strong technical ownership to the team and consistently contributed with clarity, reliability, and solid execution across development initiatives.",
+      "Sravan Tech Labs brought strong technical ownership to the team and consistently contributed with clarity, reliability, and solid execution across development initiatives.",
     name: "Team Communn",
     role: "Product & Engineering",
     company: "Communn.io",
