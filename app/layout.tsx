@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
-import ScrollToTop from "@/components/layout/ScrollToTop";
+import FixedContactActions from "@/components/layout/FixedContactActions";
 import { site } from "@/lib/site";
 
 const siteUrl =
@@ -102,7 +102,7 @@ export default function RootLayout({
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
-        <ScrollToTop />
+        <FixedContactActions />
       </body>
     </html>
   );

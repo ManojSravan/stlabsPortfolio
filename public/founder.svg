@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 533" fill="none" role="img" aria-label="Founder portrait placeholder">
+  <rect width="400" height="533" fill="#f4f3f0"/>
+  <rect x="0" y="360" width="400" height="173" fill="#e8e6e1"/>
+  <ellipse cx="200" cy="210" rx="88" ry="96" fill="#d8d5cf"/>
+  <path d="M112 320c28-52 68-78 88-78s60 26 88 78v213H112V320z" fill="#c9c5bd"/>
+  <rect x="48" y="420" width="304" height="8" fill="#b8b3a8" opacity="0.35"/>
+</svg>

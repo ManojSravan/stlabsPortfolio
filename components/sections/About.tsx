@@ -1,4 +1,5 @@
 import PageHero from "@/components/layout/PageHero";
+import Founder from "@/components/sections/Founder";
 
 export default function About() {
   return (
@@ -38,6 +39,8 @@ export default function About() {
         </div>
       </section>
 
+    
+
       <section className="border-t border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-18 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground md:pt-1">
@@ -45,23 +48,23 @@ export default function About() {
           </p>
           <div className="grid sm:grid-cols-2 gap-10 md:gap-12">
             {[
-              {
-                t: "Craft over speed",
-                d: "We move fast, but never at the cost of work we'd be embarrassed to read in six months.",
-              },
-              {
-                t: "Plain language",
-                d: "No jargon, no theater. We say what we mean, in writing, on the record.",
-              },
-              {
-                t: "Senior hands",
-                d: "The people you meet are the people who build. No bait-and-switch.",
-              },
-              {
-                t: "Quiet engineering",
-                d: "Boring tech, strong fundamentals, and architecture that won't wake you at 3am.",
-              },
-            ].map((v) => (
+  {
+    t: "Thoughtful execution",
+    d: "We move quickly while keeping the work maintainable, readable, and reliable over time.",
+  },
+  {
+    t: "Clear communication",
+    d: "Direct conversations, practical feedback, and decisions explained without unnecessary complexity.",
+  },
+  {
+    t: "Hands-on delivery",
+    d: "The people involved in planning and discussions are directly involved in building the product.",
+  },
+  {
+    t: "Strong foundations",
+    d: "Well-structured systems, practical architecture choices, and technology selected for long-term stability.",
+  },
+].map((v) => (
               <div key={v.t}>
                 <h3 className="font-serif text-2xl">{v.t}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{v.d}</p>
@@ -70,8 +73,8 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      <section className="border-t border-border/60">
+      <Founder />
+      {/* <section className="border-t border-border/60">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-18">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">By the numbers</p>
           <div className="mt-10 grid sm:grid-cols-3 gap-10 md:gap-12">
@@ -89,7 +92,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="border-t border-border/60 bg-secondary/30">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
