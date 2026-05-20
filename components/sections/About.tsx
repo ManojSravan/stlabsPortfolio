@@ -1,0 +1,113 @@
+import PageHero from "@/components/layout/PageHero";
+
+export default function About() {
+  return (
+    <div>
+      <PageHero
+        label="About"
+        title={
+          <>
+            A small studio with <span className="text-accent">a long memory</span>.
+          </>
+        }
+      />
+
+      <section>
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground md:pt-1">
+            Who we are
+          </p>
+          <div className="space-y-6 text-base leading-relaxed max-w-2xl text-foreground/90">
+            <p>
+              Sravan Tech Labs is a product development and consulting studio. We&apos;re a
+              tight-knit team of engineers, designers, and product thinkers who care more
+              about shipping good software than chasing trends.
+            </p>
+            <p>
+              Our clients lean on us for clarity. Whether it&apos;s a first prototype, a stuck
+              rewrite, or a question of whether to build at all. We bring honest answers, a
+              steady process, and a calm room to think.
+            </p>
+            <p>
+              We&apos;ve helped startups find product-market fit, helped operators replace brittle
+              systems with calm ones, and helped technical leaders make better bets. We&apos;re
+              proud of every line of code, but prouder of the relationships that make it
+              possible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border/60 bg-secondary/40">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground md:pt-1">
+            What we value
+          </p>
+          <div className="grid sm:grid-cols-2 gap-10 md:gap-12">
+            {[
+              {
+                t: "Craft over speed",
+                d: "We move fast, but never at the cost of work we'd be embarrassed to read in six months.",
+              },
+              {
+                t: "Plain language",
+                d: "No jargon, no theater. We say what we mean, in writing, on the record.",
+              },
+              {
+                t: "Senior hands",
+                d: "The people you meet are the people who build. No bait-and-switch.",
+              },
+              {
+                t: "Quiet engineering",
+                d: "Boring tech, strong fundamentals, and architecture that won't wake you at 3am.",
+              },
+            ].map((v) => (
+              <div key={v.t}>
+                <h3 className="font-serif text-2xl">{v.t}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{v.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border/60">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">By the numbers</p>
+          <div className="mt-10 grid sm:grid-cols-3 gap-10 md:gap-12">
+            {[
+              { n: "40+", t: "Products shipped" },
+              { n: "15", t: "Long-term partners" },
+              { n: "6 yrs", t: "Building together" },
+            ].map((s) => (
+              <div key={s.t} className="border-t border-border/80 pt-8 sm:border-t-0 sm:pt-0">
+                <p className="font-serif text-5xl md:text-6xl text-accent">{s.n}</p>
+                <p className="mt-2 text-sm text-muted-foreground uppercase tracking-[0.2em]">
+                  {s.t}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border/60 bg-secondary/30">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Find us</p>
+          <h2 className="font-serif text-3xl md:text-4xl mt-4 max-w-2xl text-balance">
+            Based in Bengaluru, working with teams worldwide.
+          </h2>
+          <div className="mt-10 overflow-hidden border border-border ring-1 ring-border/60">
+            <iframe
+              title="Sravan Tech Labs location"
+              src="https://www.google.com/maps?q=Bengaluru%2C+India&output=embed"
+              className="w-full h-[380px] md:h-[420px] grayscale contrast-[1.05]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
