@@ -10,8 +10,8 @@ export default function Testimonials() {
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
         <SectionHeader
           label="Client partners"
-          title="What leadership teams say after we ship."
-          description="We measure success by products that endure and partnerships that continue, not by stack choices on a slide."
+          title="What teams say after we ship."
+          description=  "We measure success through long-term trust, operational clarity, and systems teams can confidently build on over time."
         />
         <div className="mt-14 grid gap-8 md:grid-cols-2">
           {featured.map((t) => (

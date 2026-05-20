@@ -7,13 +7,13 @@ export default function About() {
         label="About"
         title={
           <>
-            A small studio with <span className="text-accent">a long memory</span>.
+           Small team.<span className="text-accent">Clear Systems</span>.
           </>
         }
       />
 
       <section>
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-18 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground md:pt-1">
             Who we are
           </p>
@@ -39,7 +39,7 @@ export default function About() {
       </section>
 
       <section className="border-t border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-18 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground md:pt-1">
             What we value
           </p>
@@ -72,13 +72,13 @@ export default function About() {
       </section>
 
       <section className="border-t border-border/60">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-18">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">By the numbers</p>
           <div className="mt-10 grid sm:grid-cols-3 gap-10 md:gap-12">
             {[
-              { n: "40+", t: "Products shipped" },
-              { n: "15", t: "Long-term partners" },
-              { n: "6 yrs", t: "Building together" },
+              { n: "10+", t: "Products shipped" },
+              { n: "5+", t: "Long-term partners" },
+              { n: "3 yrs", t: "Building together" },
             ].map((s) => (
               <div key={s.t} className="border-t border-border/80 pt-8 sm:border-t-0 sm:pt-0">
                 <p className="font-serif text-5xl md:text-6xl text-accent">{s.n}</p>

@@ -13,7 +13,7 @@ export default function Contact() {
         label="Contact"
         title={
           <>
-            Tell us what you&apos;re <span className="text-accent">trying to build</span>.
+            Tell us what you <span className="text-accent">need </span>.
           </>
         }
         description="Share a few details about your project. We reply within one business day, always from someone on the team."

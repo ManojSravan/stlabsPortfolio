@@ -62,11 +62,11 @@ export default function Services() {
         label="Services"
         title={
           <>
-            Five practices, shaped around{" "}
-            <span className="text-accent">what you actually need</span>.
+           What we {""}
+            <span className="text-accent">help teams ship.</span>.
           </>
         }
-        description="Engagements are scoped to outcomes, not seats. Most projects start with a short discovery week, we'll tell you honestly whether we're the right team for the work."
+        description="Clear scope, direct communication, and execution without unnecessary overhead."
       />
 
       <section>

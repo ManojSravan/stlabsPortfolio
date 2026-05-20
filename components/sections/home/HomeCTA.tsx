@@ -8,7 +8,7 @@ export default function HomeCTA() {
           Have something you&apos;d like to build?
         </h2>
         <Link
-          href="/contact"
+          href="https://cal.com/manoj-sravan-annivg/free-discovery-call" target="_blank"
           className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 text-sm hover:bg-accent transition-colors w-fit shrink-0"
         >
           Get in touch <span aria-hidden>→</span>

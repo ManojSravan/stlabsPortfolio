@@ -10,11 +10,11 @@ export default function Work() {
         label="Work"
         title={
           <>
-            Software we&apos;ve shipped with the teams we&apos;ve{" "}
-            <span className="text-accent">partnered with</span>.
+            Selected{" "}
+            <span className="text-accent">Work</span>.
           </>
         }
-        description="From first prototype to production scale. Each engagement is scoped to outcomes, here is a selection of recent product work across our practices."
+        description=  "A collection of platforms, systems, and digital products built with a focus on clarity, scalability, and execution."
       />
 
       <section>

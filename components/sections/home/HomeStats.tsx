@@ -1,8 +1,8 @@
 const stats = [
-  { value: "40+", label: "Products shipped" },
-  { value: "15", label: "Long-term partners" },
-  { value: "2020", label: "Trusted since" },
-  { value: "Global", label: "Remote-first studio" },
+  { value: "10+", label: "Products shipped" },
+{ value: "6+", label: "Startup partnerships" },
+{ value: "14 days", label: "Average MVP delivery" },
+{ value: "Remote", label: "Async-first execution" },
 ] as const;
 
 export default function HomeStats() {

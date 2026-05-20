@@ -12,7 +12,7 @@ export default function ProjectArticle({ project, related }: ProjectArticleProps
   return (
     <article>
       <header className="border-b border-border/60">
-        <div className="mx-auto max-w-3xl px-6 pt-12 pb-10 md:pt-16 md:pb-12">
+        <div className="mx-auto max-w-5xl px-6 pt-12 pb-10 md:pt-16 md:pb-12">
           <Link
             href="/work"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-accent transition-colors"

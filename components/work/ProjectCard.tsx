@@ -32,9 +32,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               </span>
               <span>{project.year}</span>
             </div>
-            <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-accent/90">
+            {/* <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-accent/90">
               {project.subtitle}
-            </p>
+            </p> */}
             <h3 className="font-serif mt-3 text-xl md:text-2xl leading-snug text-balance group-hover:text-accent transition-colors">
               {project.title}
             </h3>
