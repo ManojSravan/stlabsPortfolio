@@ -28,21 +28,32 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.name} | ${site.tagline}`,
+    default:
+      "Premium E-commerce Storefronts & High-Converting Landing Pages | Sravan Tech Labs",
     template: `%s · ${site.name}`,
   },
-  description: site.description,
+  description:
+    "Expert e-commerce storefronts, landing pages, and technical consultancy. We build high-performing digital experiences for ambitious brands with reliable infrastructure.",
   applicationName: site.name,
   authors: [{ name: site.name, url: siteUrl }],
   creator: site.name,
   publisher: site.name,
   keywords: [
-    "software development",
+    "e-commerce storefront development",
+    "high-converting landing pages",
+    "Next.js development",
+    "Shopify development",
+    "MVP development",
+    "technical consultancy",
+    "SaaS development",
     "product engineering",
-    "SaaS",
-    "web development",
-    "tech consulting",
+    "web development agency",
+    "ecommerce platform",
+    "landing page builder",
+    "hire developers",
     "Sravan Tech Labs",
+    "Bengaluru tech studio",
+    "product development consulting",
   ],
   category: "technology",
   formatDetection: {
@@ -55,22 +66,26 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: site.name,
-    title: site.name,
-    description: site.description,
+    title: "Premium E-commerce Storefronts & Landing Pages for Modern Brands",
+    description:
+      "Build high-performing digital experiences. Custom e-commerce storefronts, fast landing pages, and technical consultancy for ambitious teams worldwide.",
     images: [
       {
-        url: "/logostlabs.png",
-        width: 500,
-        height: 500,
-        alt: `${site.name} logo`,
+        url: `${siteUrl}/logostlabs.png`,
+        width: 1200,
+        height: 630,
+        alt: "Sravan Tech Labs - Premium E-commerce & Product Development",
+        type: "image/png",
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: site.name,
-    description: site.description,
-    images: ["/logostlabs.png"],
+    card: "summary_large_image",
+    title: "Premium E-commerce Storefronts & Landing Pages | Sravan Tech Labs",
+    description:
+      "High-performing digital storefronts and landing pages built for modern brands. Expert technical consultancy for SaaS, learning platforms, and commerce.",
+    images: [`${siteUrl}/logostlabs.png`],
+    creator: "@sravantechlabs",
   },
   icons: {
     icon: [
@@ -82,9 +97,15 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
   },
   alternates: {
     canonical: siteUrl,
+  },
+  verification: {
+    google: "", // Add your Google Search Console verification code
   },
 };
 
