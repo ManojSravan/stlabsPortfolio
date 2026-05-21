@@ -18,7 +18,7 @@ export default function Work() {
       />
 
       <section>
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-10">
             All projects
           </p>
@@ -31,7 +31,7 @@ export default function Work() {
       </section>
 
       <section className="border-t border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <h2 className="font-serif text-3xl md:text-5xl max-w-xl leading-tight text-balance">
             Have a project that belongs on this wall?
           </h2>

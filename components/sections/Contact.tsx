@@ -20,7 +20,7 @@ export default function Contact() {
       />
 
       <section>
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 grid gap-16 lg:grid-cols-[1.6fr_1fr]">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-14 grid gap-10 lg:grid-cols-[1.6fr_1fr]">
           <form
             onSubmit={(e) => {
               e.preventDefault();

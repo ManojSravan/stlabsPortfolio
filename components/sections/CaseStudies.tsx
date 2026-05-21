@@ -6,7 +6,7 @@ import { caseStudies } from "@/lib/work";
 export default function CaseStudies() {
   return (
     <section className="border-t border-border/60 bg-secondary/30">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
         <SectionHeader
           label="Case studies"
           title="How we partner with teams on complex product work."

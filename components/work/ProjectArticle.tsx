@@ -76,7 +76,7 @@ export default function ProjectArticle({ project, related }: ProjectArticleProps
 
       {related.length > 0 ? (
         <aside className="border-t border-border/60 bg-secondary/30">
-          <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+          <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
               More from our studio
             </p>

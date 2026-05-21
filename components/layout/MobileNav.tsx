@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { navLinks, site } from "@/lib/site";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { mainNav, site } from "@/lib/site";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState<string | null>(null);
 
   return (
     <div className="relative md:hidden">
@@ -21,18 +22,54 @@ export default function MobileNav() {
       </button>
 
       {open ? (
-        <div className="absolute right-0 top-full z-50 mt-2 w-[min(100vw-3rem,20rem)] border border-border/60 bg-background shadow-lg">
-          <nav className="flex flex-col p-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="px-3 py-3 text-sm hover:bg-secondary/80 hover:text-accent transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+        <div className="absolute right-0 top-full z-50 mt-2 w-[min(100vw-3rem,20rem)] max-h-[min(70vh,28rem)] overflow-y-auto border border-border/60 bg-background shadow-lg">
+          <nav className="flex flex-col p-2" aria-label="Mobile">
+            {mainNav.map((entry) =>
+              entry.type === "link" ? (
+                <Link
+                  key={entry.href}
+                  href={entry.href}
+                  onClick={() => setOpen(false)}
+                  className="px-3 py-3 text-sm hover:bg-secondary/80 hover:text-accent transition-colors"
+                >
+                  {entry.label}
+                </Link>
+              ) : (
+                <div key={entry.label} className="border-b border-border/40 last:border-0">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setExpanded((v) => (v === entry.label ? null : entry.label))
+                    }
+                    className="flex w-full items-center justify-between px-3 py-3 text-sm hover:bg-secondary/80 hover:text-accent transition-colors"
+                    aria-expanded={expanded === entry.label}
+                  >
+                    {entry.label}
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${
+                        expanded === entry.label ? "rotate-180" : ""
+                      }`}
+                      aria-hidden
+                    />
+                  </button>
+                  {expanded === entry.label ? (
+                    <ul className="pb-2 pl-2">
+                      {entry.items.map((item) => (
+                        <li key={item.label}>
+                          <Link
+                            href={item.href}
+                            onClick={() => setOpen(false)}
+                            className="block px-3 py-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
+              )
+            )}
             <Link
               href="/contact"
               onClick={() => setOpen(false)}

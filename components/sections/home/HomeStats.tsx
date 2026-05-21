@@ -8,7 +8,7 @@ const stats = [
 export default function HomeStats() {
   return (
     <section className="border-b border-border/60 bg-foreground text-background">
-      <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
+      <div className="mx-auto max-w-6xl px-6 py-10 md:py-11">
         <ul className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-6">
           {stats.map((stat) => (
             <li

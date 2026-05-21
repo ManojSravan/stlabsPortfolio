@@ -7,7 +7,7 @@ export default function HomeHero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_20%_0%,var(--accent-muted),transparent_55%)]"
       />
-      <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-18 md:pt-20 md:pb-24">
+      <div className="relative mx-auto max-w-6xl px-6 pt-12 pb-12 md:pt-14 md:pb-14">
         <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
           <span className="h-px w-8 bg-accent/60" />
           <span>Product Studio · Est. 2023 · Bengaluru</span>
@@ -28,7 +28,7 @@ export default function HomeHero() {
           with founders and engineering leaders to design, build, and scale digital
           products, from first prototype to production at scale.
         </p>
-        <div className="mt-12 flex flex-wrap items-center gap-4 sm:gap-6">
+        <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-5">
           <Link
             href="https://cal.com/manoj-sravan-annivg/starterlaunch" target="_blank"
             className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"

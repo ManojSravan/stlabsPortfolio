@@ -1,20 +1,31 @@
 import RecentWork from "@/components/sections/RecentWork";
 import Testimonials from "@/components/sections/Testimonials";
 import Pricing from "@/components/sections/Pricing";
+import HomeClients from "@/components/sections/home/HomeClients";
 import HomeCTA from "@/components/sections/home/HomeCTA";
+import HomeFAQs from "@/components/sections/home/HomeFAQs";
 import HomeHero from "@/components/sections/home/HomeHero";
+import HomeHowWeWork from "@/components/sections/home/HomeHowWeWork";
 import HomeStats from "@/components/sections/home/HomeStats";
-import HomeWhatWeDo from "@/components/sections/home/HomeWhatWeDo";
 
 export default function Index() {
   return (
     <>
       <HomeHero />
       <HomeStats />
-      <HomeWhatWeDo />
+
       <RecentWork />
-      <Pricing />
+
+      <HomeClients />
+
+      <HomeHowWeWork />
+
       <Testimonials />
+
+      <Pricing />
+
+      <HomeFAQs />
+
       <HomeCTA />
     </>
   );

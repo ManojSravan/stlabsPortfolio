@@ -7,7 +7,7 @@ export default function Founder() {
 
   return (
     <section className="border-t border-border/60">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
         <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
           From the founder
         </p>

@@ -43,9 +43,16 @@ const icons = [
 
 type SocialLinksProps = {
   className?: string;
+  variant?: "dark" | "light";
 };
 
-export default function SocialLinks({ className = "" }: SocialLinksProps) {
+const variantStyles = {
+  dark: "border border-background/20 text-background/70 hover:border-[var(--accent-light)] hover:text-[var(--accent-light)] hover:bg-background/5",
+  light:
+    "border border-border/80 text-muted-foreground hover:border-accent hover:text-accent hover:bg-secondary/50",
+} as const;
+
+export default function SocialLinks({ className = "", variant = "dark" }: SocialLinksProps) {
   return (
     <ul className={`flex items-center gap-2 ${className}`}>
       {icons.map(({ href, label, Icon }) => (
@@ -55,9 +62,9 @@ export default function SocialLinks({ className = "" }: SocialLinksProps) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="inline-flex h-9 w-9 items-center justify-center border border-background/20 text-background/70 hover:border-[var(--accent-light)] hover:text-[var(--accent-light)] hover:bg-background/5 transition-colors"
+            className={`inline-flex h-8 w-8 items-center justify-center transition-colors ${variantStyles[variant]}`}
           >
-            <Icon className="h-4 w-4" />
+            <Icon className="h-3.5 w-3.5" />
           </a>
         </li>
       ))}

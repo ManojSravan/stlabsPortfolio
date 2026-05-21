@@ -17,7 +17,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div
-      className={`flex flex-col gap-6 md:flex-row md:items-end md:justify-between ${
+      className={`flex flex-col gap-4 md:flex-row md:items-end md:justify-between ${
         centered ? "text-center md:text-center md:flex-col md:items-center" : ""
       }`}
     >

@@ -1,3 +1,5 @@
+import SectionShell from "@/components/layout/SectionShell";
+
 const practices = [
   {
     n: "01",
@@ -23,8 +25,8 @@ const practices = [
 
 export default function HomeWhatWeDo() {
   return (
-    <section className="border-t border-border/60">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 grid gap-12 md:grid-cols-[minmax(0,1fr)_2fr] md:gap-16">
+    <SectionShell>
+      <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_2fr] md:gap-12">
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">What we do</p>
           <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
@@ -35,15 +37,15 @@ export default function HomeWhatWeDo() {
           {practices.map((c) => (
             <div
               key={c.n}
-              className="group bg-background p-8 transition-colors hover:bg-secondary/30"
+              className="group bg-background p-6 md:p-7 transition-colors hover:bg-secondary/30"
             >
               <p className="font-serif text-2xl text-accent">{c.n}</p>
-              <h3 className="mt-6 text-base font-medium">{c.t}</h3>
+              <h3 className="mt-4 text-base font-medium">{c.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.d}</p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

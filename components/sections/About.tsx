@@ -14,7 +14,7 @@ export default function About() {
       />
 
       <section>
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-18 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-14 grid gap-8 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-12">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground md:pt-1">
             Who we are
           </p>
@@ -42,11 +42,11 @@ export default function About() {
     
 
       <section className="border-t border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-18 grid gap-10 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-16">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-14 grid gap-8 md:grid-cols-[minmax(0,12rem)_1fr] md:gap-12">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground md:pt-1">
             What we value
           </p>
-          <div className="grid sm:grid-cols-2 gap-10 md:gap-12">
+          <div className="grid sm:grid-cols-2 gap-8 md:gap-10">
             {[
   {
     t: "Thoughtful execution",
@@ -95,12 +95,12 @@ export default function About() {
       </section> */}
 
       <section className="border-t border-border/60 bg-secondary/30">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Find us</p>
           <h2 className="font-serif text-3xl md:text-4xl mt-4 max-w-2xl text-balance">
             Based in Bengaluru, working with teams worldwide.
           </h2>
-          <div className="mt-10 overflow-hidden border border-border ring-1 ring-border/60">
+          <div className="mt-8 overflow-hidden border border-border ring-1 ring-border/60">
             <iframe
               title="Sravan Tech Labs location"
               src="https://www.google.com/maps?q=Bengaluru%2C+India&output=embed"

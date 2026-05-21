@@ -74,7 +74,7 @@ export default function Services() {
           {SERVICES.map((s) => (
             <article
               key={s.n}
-              className="grid gap-8 py-14 md:py-16 border-b border-border/60 last:border-b-0 md:grid-cols-[5rem_1fr_1fr] md:gap-12 group"
+              className="grid gap-6 py-10 md:py-12 border-b border-border/60 last:border-b-0 md:grid-cols-[5rem_1fr_1fr] md:gap-10 group"
             >
               <p className="font-serif text-4xl md:text-5xl text-accent leading-none">{s.n}</p>
               <div>
@@ -101,7 +101,7 @@ export default function Services() {
       </section>
 
       <section className="border-t border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <h2 className="font-serif text-3xl md:text-5xl max-w-xl leading-tight text-balance">
             Not sure which fits? Let&apos;s talk it through.
           </h2>
