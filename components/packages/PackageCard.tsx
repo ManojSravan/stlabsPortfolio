@@ -16,12 +16,12 @@ export default function PackageCard({
       className={`flex flex-col border border-border/80 bg-background transition-colors hover:border-accent/40 overflow-hidden`}
     >
       {/* Package Illustration */}
-      <div className="relative h-48 w-full bg-muted/20">
+      <div className="relative h-64 w-full bg-muted/20">
         <Image
           src={pkg.illustration}
           alt={pkg.title}
           fill
-          className="object-contain p-6"
+          className="object-contain p-4"
         />
       </div>
 

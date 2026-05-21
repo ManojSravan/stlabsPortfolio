@@ -1,5 +1,10 @@
 import SectionShell from "@/components/layout/SectionShell";
 import Image from "next/image";
+import {
+  RevealAnimation,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/animations";
 
 const principles = [
   {
@@ -25,42 +30,41 @@ const principles = [
 export default function HomeHowWeWork() {
   return (
     <SectionShell variant="muted">
-      <div className="max-w-2xl">
-        <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          How we work
-        </p>
-        <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
-          A steady process for high-stakes product work.
-        </h2>
-        <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          Engagements are structured for clarity from week one: aligned goals,
-          visible milestones, and communication that respects your leadership
-          team&apos;s time.
-        </p>
-      </div>
-      <ol className="mt-10 grid gap-4 md:grid-cols-3 md:gap-5">
+      <RevealAnimation>
+        <div className="max-w-2xl">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            How we work
+          </p>
+          <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
+            Focused iterations. Weekly demos.
+          </h2>
+        </div>
+      </RevealAnimation>
+      <StaggerContainer
+        staggerDelay={0.15}
+        className="mt-10 grid gap-4 md:grid-cols-3 md:gap-5"
+      >
         {principles.map((item) => (
-          <li
-            key={item.n}
-            className="border border-border/60 bg-background p-6 transition-colors hover:border-accent/30"
-          >
-            <div className="relative h-40 w-full mb-6">
-              <Image
-                src={item.i}
-                alt={item.t}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
+          <StaggerItem key={item.n}>
+            <div className="border border-border/60 bg-background p-6 transition-colors hover:border-accent/30">
+              <div className="relative h-40 w-full mb-6">
+                <Image
+                  src={item.i}
+                  alt={item.t}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <p className="font-serif text-2xl text-accent">{item.n}</p>
+              <h3 className="mt-4 font-serif text-lg leading-snug">{item.t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {item.d}
+              </p>
             </div>
-            <p className="font-serif text-2xl text-accent">{item.n}</p>
-            <h3 className="mt-4 font-serif text-lg leading-snug">{item.t}</h3>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-              {item.d}
-            </p>
-          </li>
+          </StaggerItem>
         ))}
-      </ol>
+      </StaggerContainer>
     </SectionShell>
   );
 }

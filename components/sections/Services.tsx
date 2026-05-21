@@ -51,7 +51,11 @@ const SERVICES = [
     title: "Landing Pages",
     summary:
       "Sharp, fast, single-purpose pages that earn the click, designed and shipped in days, not months.",
-    points: ["Copy + design + build", "A/B-ready instrumentation", "CMS or fully static"],
+    points: [
+      "Copy + design + build",
+      "A/B-ready instrumentation",
+      "CMS or fully static",
+    ],
   },
 ];
 
@@ -62,11 +66,10 @@ export default function Services() {
         label="Services"
         title={
           <>
-           What we {""}
-            <span className="text-accent">help teams ship.</span>.
+            We build <span className="text-accent">products that grow.</span>
           </>
         }
-        description="Clear scope, direct communication, and execution without unnecessary overhead."
+        description="Ecommerce storefronts, SaaS platforms, learning systems, landing pages, and technical strategy for founders and engineering leaders."
       />
 
       <section>
@@ -76,7 +79,9 @@ export default function Services() {
               key={s.n}
               className="grid gap-6 py-10 md:py-12 border-b border-border/60 last:border-b-0 md:grid-cols-[5rem_1fr_1fr] md:gap-10 group"
             >
-              <p className="font-serif text-4xl md:text-5xl text-accent leading-none">{s.n}</p>
+              <p className="font-serif text-4xl md:text-5xl text-accent leading-none">
+                {s.n}
+              </p>
               <div>
                 <h2 className="font-serif text-2xl md:text-3xl leading-tight group-hover:text-accent transition-colors">
                   {s.title}
@@ -103,7 +108,7 @@ export default function Services() {
       <section className="border-t border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-12 md:py-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <h2 className="font-serif text-3xl md:text-5xl max-w-xl leading-tight text-balance">
-            Not sure which fits? Let&apos;s talk it through.
+            Ready to start? Let&apos;s talk.
           </h2>
           <Link
             href="/contact"

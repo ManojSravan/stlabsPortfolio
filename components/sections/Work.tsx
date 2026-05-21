@@ -10,11 +10,10 @@ export default function Work() {
         label="Work"
         title={
           <>
-            Selected{" "}
-            <span className="text-accent">Work</span>.
+            Recent <span className="text-accent">case studies.</span>
           </>
         }
-        description=  "A collection of platforms, systems, and digital products built with a focus on clarity, scalability, and execution."
+        description="Shipped products and platforms across ecommerce, SaaS, creator tools, and learning systems."
       />
 
       <section>
@@ -33,7 +32,7 @@ export default function Work() {
       <section className="border-t border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-12 md:py-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <h2 className="font-serif text-3xl md:text-5xl max-w-xl leading-tight text-balance">
-            Have a project that belongs on this wall?
+            Ready to build something great?
           </h2>
           <Link
             href="/contact"

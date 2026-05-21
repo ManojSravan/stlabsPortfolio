@@ -54,7 +54,7 @@ export default function SiteHeader() {
               href="/contact"
               className="hidden md:inline-flex items-center gap-2 bg-foreground text-background px-4 py-2.5 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
             >
-              Start a project <span aria-hidden>→</span>
+              Start a Project <span aria-hidden>→</span>
             </Link>
             <MobileNav />
           </div>

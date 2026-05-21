@@ -8,20 +8,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqs } from "@/lib/site";
+import { RevealAnimation } from "@/components/animations";
 
 export default function HomeFAQs() {
   return (
     <SectionShell id="faqs" className="scroll-mt-28">
       <div className="mx-auto max-w-3xl">
-        <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">FAQs</p>
+        <RevealAnimation className="text-center">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            FAQs
+          </p>
           <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
             Frequently asked questions
           </h2>
-          <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            Straight answers about how we work, what we build, and how to start.
-          </p>
-        </div>
+        </RevealAnimation>
         <Accordion className="mt-8 gap-2" defaultValue={[faqs[0].q]}>
           {faqs.map((faq) => (
             <AccordionItem

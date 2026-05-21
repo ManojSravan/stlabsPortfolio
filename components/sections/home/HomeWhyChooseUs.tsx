@@ -6,18 +6,12 @@ export default function HomeWhyChooseUs() {
     <SectionShell id="why-choose-us" className="scroll-mt-28">
       <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_2fr] md:gap-12">
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Why us</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            Why us
+          </p>
           <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
             {whyChooseUs.title}
           </h2>
-          <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-            {whyChooseUs.subtitle}
-          </p>
-          <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/90">
-            {whyChooseUs.intro.map((paragraph) => (
-              <p key={paragraph.slice(0, 32)}>{paragraph}</p>
-            ))}
-          </div>
         </div>
         <div className="grid sm:grid-cols-2 gap-px bg-border ring-1 ring-border/60">
           {whyChooseUs.points.map((point, index) => (

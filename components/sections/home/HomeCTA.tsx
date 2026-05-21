@@ -1,10 +1,11 @@
 import Link from "next/link";
 import SectionShell from "@/components/layout/SectionShell";
+import { RevealAnimation } from "@/components/animations";
 
 export default function HomeCTA() {
   return (
     <SectionShell>
-      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <RevealAnimation className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <h2 className="font-serif text-3xl md:text-4xl max-w-xl leading-tight text-balance">
           Have something you&apos;d like to build?
         </h2>
@@ -15,7 +16,7 @@ export default function HomeCTA() {
         >
           Get in touch <span aria-hidden>→</span>
         </Link>
-      </div>
+      </RevealAnimation>
     </SectionShell>
   );
 }

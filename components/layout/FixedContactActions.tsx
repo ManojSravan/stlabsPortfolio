@@ -25,10 +25,11 @@ export default function FixedContactActions() {
         href={site.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex size-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-        aria-label="Chat on WhatsApp"
+        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-medium shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        aria-label="Chat with us on WhatsApp"
       >
-        <WhatsAppIcon className="size-5" />
+        <WhatsAppIcon className="size-4" />
+        <span className="hidden sm:inline">Chat</span>
       </a>
 
       {scrollVisible ? (
