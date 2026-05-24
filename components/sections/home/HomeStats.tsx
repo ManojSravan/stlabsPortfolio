@@ -1,10 +1,10 @@
 import { StaggerContainer, StaggerItem } from "@/components/animations";
 
 const stats = [
-  { value: "10+", label: "Products shipped" },
-  { value: "6+", label: "Startup partnerships" },
-  { value: "14 days", label: "Average MVP delivery" },
-  { value: "Remote", label: "Async-first execution" },
+  { value: "10+ Products", label: "Digital experiences delivered." },
+  { value: "6+ Partnerships", label: "Built for growing brands." },
+  { value: "14-day delivery", label: "Fast and reliable execution." },
+  { value: "Remote-First", label: "Async-first execution" },
 ] as const;
 
 export default function HomeStats() {
@@ -18,7 +18,7 @@ export default function HomeStats() {
           {stats.map((stat) => (
             <StaggerItem key={stat.label}>
               <div className="relative md:pl-6 md:first:pl-0 md:border-l md:first:border-l-0 border-background/15">
-                <p className="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-[var(--accent-light)]">
+                <p className="font-serif text-3xl md:text-2xl lg:text-3xl tracking-tight text-[var(--accent-light)]">
                   {stat.value}
                 </p>
                 <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-background/65">

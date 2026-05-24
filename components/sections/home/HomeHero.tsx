@@ -12,28 +12,27 @@ export default function HomeHero() {
         <RevealAnimation delay={0}>
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
             <span className="h-px w-8 bg-accent/60" />
-            <span>Design & Commerce Studio · Est. 2023 · Bengaluru</span>
+           <span>Technology & Digital Growth Consultancy · Est. 2023 · India</span>
           </div>
         </RevealAnimation>
         <RevealAnimation delay={0.1}>
           <h1 className="font-serif mt-8 text-balance text-4xl leading-[1.02] tracking-tight sm:text-5xl md:text-7xl lg:text-[5.25rem] max-w-5xl">
-            Premium ecommerce{" "}
+           Turning Businesses{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-accent">
-                storefronts & Landing pages
+               into brands
               </span>
               <span
                 aria-hidden
                 className="absolute -inset-x-1 bottom-1 z-0 h-[0.45em] bg-accent/15"
               />
             </span>{" "}
-            for modern brands.
+           online
           </h1>
         </RevealAnimation>
         <RevealAnimation delay={0.2}>
           <p className="mt-8 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
-            We help ecommerce brands launch clean, high-performing digital
-            storefronts with reliable infrastructure behind them.
+           We help ecommerce brands build clean, modern, and high-performing digital storefronts backed by reliable technology, scalable infrastructure, and seamless user experiences that support long-term business growth.
           </p>
         </RevealAnimation>
         <RevealAnimation delay={0.3}>
@@ -41,15 +40,15 @@ export default function HomeHero() {
             <Link
               href="https://cal.com/manoj-sravan-annivg/starterlaunch"
               target="_blank"
-              className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
+              className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-4 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
             >
-              Launch Your Store <span aria-hidden>→</span>
+              Launch Your Brand With Us <span aria-hidden></span>
             </Link>
             <Link
               href="/work"
               className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] border border-border px-6 py-3.5 hover:border-accent hover:text-accent transition-colors"
             >
-              View our Work
+              Know How We Help Your Brand
             </Link>
           </div>
         </RevealAnimation>

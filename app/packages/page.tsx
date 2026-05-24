@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
 import PageHero from "@/components/layout/PageHero";
 import SectionShell from "@/components/layout/SectionShell";
 import PackageCard from "@/components/packages/PackageCard";
 import { packages } from "@/lib/packages";
-import { site } from "@/lib/site";
-
-export const metadata: Metadata = {
-  title: "Packages",
-  description: `Fixed-scope packages from ${site.name} for ecommerce, SEO, landing pages, and growth.`,
-};
+ 
+ 
 
 export default function PackagesPage() {
   return (

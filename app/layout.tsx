@@ -25,87 +25,149 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+// app/page.tsx OR app/layout.tsx
+
+ 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL("https://sravantechlabs.com"),
+
   title: {
     default:
-      "Premium E-commerce Storefronts & High-Converting Landing Pages | Sravan Tech Labs",
-    template: `%s · ${site.name}`,
+      "Sravan Tech Labs | Ecommerce Development & Digital Growth Consultancy",
+    template: "%s | Sravan Tech Labs",
   },
+
   description:
-    "Expert e-commerce storefronts, landing pages, and technical consultancy. We build high-performing digital experiences for ambitious brands with reliable infrastructure.",
-  applicationName: site.name,
-  authors: [{ name: site.name, url: siteUrl }],
-  creator: site.name,
-  publisher: site.name,
+    "Sravan Tech Labs is a modern ecommerce development and technology consultancy helping startups, ecommerce brands, and businesses build scalable digital products, high-performing storefronts, business websites, and growth-focused web platforms.",
+
   keywords: [
-    "e-commerce storefront development",
-    "high-converting landing pages",
-    "Next.js development",
-    "Shopify development",
-    "MVP development",
-    "technical consultancy",
-    "SaaS development",
-    "product engineering",
-    "web development agency",
-    "ecommerce platform",
-    "landing page builder",
-    "hire developers",
+    // Brand
     "Sravan Tech Labs",
-    "Bengaluru tech studio",
-    "product development consulting",
+    "Sravan Tech Labs India",
+    "Sravan Tech Labs Bengaluru",
+
+    // Core Services
+    "Ecommerce Development",
+    "Ecommerce Website Development",
+    "Shopify Development",
+    "Shopify Experts India",
+    "Custom Ecommerce Development",
+    "Next.js Development Agency",
+    "Web Development Agency",
+    "Website Development Company",
+    "Startup MVP Development",
+    "SaaS Development",
+    "Business Website Development",
+    "Landing Page Development",
+    "SEO Optimization Services",
+    "Brand Systems",
+
+    // Intent-based keywords
+    "Best Ecommerce Agency",
+    "Best Web Development Agency",
+    "Best Shopify Agency",
+    "Best Ecommerce Developers India",
+    "Best Digital Agency Bengaluru",
+    "Top Ecommerce Consultants",
+    "Modern Web Development Agency",
+    "Digital Growth Consultancy",
+    "Technology Consultancy India",
+
+    // Local SEO
+    "Ecommerce Development Bengaluru",
+    "Web Development Company Bengaluru",
+    "Shopify Developers Bengaluru",
+    "Website Designers Bengaluru",
+    "Startup Tech Agency India",
+    "Best Agency in Bengaluru",
+
+    // Tech keywords
+    "Next.js Agency",
+    "React Development",
+    "Vercel Experts",
+    "Stripe Integration",
+    "Headless Ecommerce",
+    "Modern Storefront Development",
   ],
-  category: "technology",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
+
+  authors: [
+    {
+      name: "Sravan Tech Labs",
+      url: "https://sravantechlabs.com",
+    },
+  ],
+
+  creator: "Sravan Tech Labs",
+  publisher: "Sravan Tech Labs",
+
+  applicationName: "Sravan Tech Labs",
+
+  category: "Technology Consultancy",
+
+  alternates: {
+    canonical: "https://sravantechlabs.com",
   },
+
   openGraph: {
-    type: "website",
-    locale: "en_IN",
-    url: siteUrl,
-    siteName: site.name,
-    title: "Premium E-commerce Storefronts & Landing Pages for Modern Brands",
+    title:
+      "Sravan Tech Labs — Ecommerce Development & Digital Growth Consultancy",
+
     description:
-      "Build high-performing digital experiences. Custom e-commerce storefronts, fast landing pages, and technical consultancy for ambitious teams worldwide.",
+      "Helping ecommerce brands and startups build scalable storefronts, digital products, and modern business experiences.",
+
+    url: "https://sravantechlabs.com",
+
+    siteName: "Sravan Tech Labs",
+
+    locale: "en_IN",
+
+    type: "website",
+
     images: [
       {
-        url: `${siteUrl}/logostlabs.png`,
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Sravan Tech Labs - Premium E-commerce & Product Development",
-        type: "image/png",
+        alt: "Sravan Tech Labs",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Premium E-commerce Storefronts & Landing Pages | Sravan Tech Labs",
+
+    title:
+      "Sravan Tech Labs — Ecommerce Development & Digital Growth Consultancy",
+
     description:
-      "High-performing digital storefronts and landing pages built for modern brands. Expert technical consultancy for SaaS, learning platforms, and commerce.",
-    images: [`${siteUrl}/logostlabs.png`],
+      "Modern storefronts, startup MVPs, scalable digital platforms, and business-focused web experiences.",
+
+    images: ["/og-image.png"],
+
     creator: "@sravantechlabs",
   },
-  icons: {
-    icon: [
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-  },
+
   robots: {
     index: true,
     follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
-  alternates: {
-    canonical: siteUrl,
-  },
+
   verification: {
-    google: "", // Add your Google Search Console verification code
+    google: "your-google-site-verification-code",
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
