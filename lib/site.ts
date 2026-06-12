@@ -107,12 +107,12 @@ export const mainNav: readonly NavEntry[] = [
         description: "Case studies and shipped products.",
       },
       {
-        href: "/work/creator-commerce-platform",
+        href: "/work/communn-creator-commerce-platform",
         label: "Creator commerce platform",
         description: "Campaigns, affiliates, and payouts.",
       },
       {
-        href: "/work/illumora-platform",
+        href: "/work/illumora-boombooth-studios",
         label: "Illumora & BoomBooth",
         description: "Wellness and creator brand platforms.",
       },

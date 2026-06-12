@@ -212,81 +212,171 @@ const consultingBody: ContentBlock[] = [
 
 export const workProjects: WorkProject[] = [
   {
-    slug: "creator-commerce-platform",
-    number: "01",
-    title: "Building a creator commerce platform for brands and influencers",
-    subtitle: "Ecommerce & Platform Engineering",
-    category: "Ecommerce",
+    slug: "communn-creator-commerce-platform",
+    number: "02",
+    title: "Engineering a Full Stack Creator Commerce Platform From the Ground Up",
+    subtitle: "Embedded product engineer for a multi-role influencer and brand commerce platform.",
+    category: "Platform Engineering",
     description:
-      "Multi-role commerce infrastructure connecting brands, influencers, affiliate campaigns, and payouts in a unified platform.",
+      "Served as a full stack product engineer at Communn.io from May 2025 to February 2026, contributing across frontend and backend development. Took ownership of production deployments, code quality, and platform stability while building core commerce infrastructure connecting brands, influencers, affiliate campaigns, and payouts.",
     excerpt:
-      "Built scalable campaign, affiliate, and payout systems enabling brands and creators to collaborate through tracked commerce workflows.",
-    client: "Creator Commerce Platform",
-    year: "2025 – 2026",
-    engagement: "Platform Engineering · Product Architecture · Backend Systems",
-    outcome: "Built end-to-end influencer infrastructure with campaign tracking and automated payouts",
+      "Nine months embedded inside a product team, building the influencer commerce infrastructure that powers Communn from campaign creation to automated payouts.",
+    client: "Communn.io",
+    year: "2025 to 2026",
+    engagement: "10-month embedded product engineering",
+    outcome:
+      "Delivered end-to-end influencer infrastructure with campaign tracking, affiliate attribution, and automated Razorpay payouts across four distinct user roles.",
     heroImage: "/work/Communn_banner.png",
     readTime: "6 min read",
     featured: true,
     body: [
       {
-        type: "paragraph",
-        text: "Associated with Sravan Tech Labs.",
+        type: "heading",
+        text: "The Brief",
       },
       {
         type: "paragraph",
-        text: "A multi-role platform connecting brands and influencers across campaign creation, affiliate tracking, and payout management. Built the influencer side from scratch and key operational modules on the brand side.",
+        text: "Communn.io needed a multi-role commerce platform that could connect brands and influencers across the full campaign lifecycle: from creation and affiliate tracking through to commission settlement and payout. The platform had to support four distinct user roles with isolated access patterns, a scalable product catalog on the brand side, and a complete creator experience on the influencer side.",
+      },
+      {
+        type: "heading",
+        text: "The Engagement",
       },
       {
         type: "paragraph",
-        text: "Built the complete influencer experience including onboarding, storefront creation, campaign marketplace access, affiliate link generation, and earnings dashboards. On the brand side, developed a hierarchical CMS supporting nested product categories with bulk CSV imports alongside a campaign management system tracking clicks, conversions, and commission events per influencer.",
+        text: "This was an embedded product engineering role, not a project handoff. From May 2025 to February 2026, the work spanned the full stack: frontend interfaces, backend systems, production deployments, CI/CD pipelines, code reviews, and testing. The role required consistent cross-functional collaboration and ownership of production quality, not just feature delivery.",
+      },
+      {
+        type: "heading",
+        text: "What We Built",
       },
       {
         type: "paragraph",
-        text: "Designed the payout system using Razorpay integration with a 30-day settlement hold and automated payout triggers after campaign completion. Implemented JWT-based authentication with four distinct roles: brand, influencer, admin, and super admin, each with scoped API permissions and isolated access patterns.",
+        text: "On the influencer side, built the complete creator experience from scratch: onboarding flows, storefront creation, campaign marketplace access, affiliate link generation, and earnings dashboards that gave creators real visibility into their performance.",
       },
       {
         type: "paragraph",
-        text: "One of the core engineering challenges was modeling campaign participation, affiliate conversions, and payout states across multiple user types without tightly coupling data ownership. Solved this by separating campaign entities from participation and earnings records, allowing scalable access control and cleaner reporting boundaries.",
+        text: "On the brand side, developed a hierarchical CMS supporting nested product categories with bulk CSV imports, alongside a campaign management system that tracked clicks, conversions, and commission events per influencer across active campaigns.",
+      },
+      {
+        type: "paragraph",
+        text: "Designed and built the payout infrastructure using Razorpay with a 30-day settlement hold and automated payout triggers on campaign completion. Authentication was implemented with JWT across four scoped roles: brand, influencer, admin, and super admin, each with isolated API permissions.",
+      },
+      {
+        type: "heading",
+        text: "The Core Engineering Challenge",
+      },
+      {
+        type: "paragraph",
+        text: "The hardest part was modeling campaign participation, affiliate conversions, and payout states across multiple user types without tightly coupling data ownership. Solved by separating campaign entities from participation and earnings records entirely, which allowed scalable access control, cleaner reporting boundaries, and a payout system that could run independently without touching campaign state.",
+      },
+      {
+        type: "heading",
+        text: "Tech Stack",
+      },
+      {
+        type: "paragraph",
+        text: "React.js, MongoDB, TypeScript, Tailwind CSS, Material UI, Cloudinary, CI/CD",
+      },
+      {
+        type: "heading",
+        text: "How We Worked",
+      },
+      {
+        type: "paragraph",
+        text: "Worked within the existing engineering team contributing to production deployments via CI/CD pipelines, participating in code reviews with precise feedback, and collaborating on testing to reduce regressions and strengthen overall product stability. Communicated clearly across functions and delivered consistently throughout the nine-month engagement.",
+      },
+      {
+        type: "heading",
+        text: "The Outcome",
+      },
+      {
+        type: "paragraph",
+        text: "Delivered a production-grade creator commerce platform with end-to-end influencer infrastructure, automated payout flows, and a scalable multi-role architecture. The platform launched with campaign tracking, affiliate attribution, and payout automation working reliably across all four user roles.",
+      },
+      {
+        type: "quote",
+        text: "Manoj was an integral part of our engineering team. He took active ownership of production deployments and was a consistent and constructive presence in our code review process, offering precise feedback that improved the quality and maintainability of our codebase - Manjula R, Chief Business Officer, Communn.io"
       },
     ],
   },
   {
-    slug: "illumora-platform",
-    number: "02",
-    title: "Digital platform implementation for a wellness and creator brand",
-    subtitle: "Platform Implementation & Technical Partnership",
-    category: "Digital Infrastructure",
+    slug: "illumora-boombooth-studios",
+    number: "01",
+    title: "From Zero to Two Production Platforms in Nine Months",
+    subtitle: "Technical development partner for a Bengaluru wellness institute and its creator sub-brand.",
+    category: "Web Platform",
     description:
-      "Technical development partnership for a psychological wellness institute and its creator-focused media sub-brand.",
+      "Served as the embedded technical development partner for Illumora, a psychological wellness institute in Bengaluru, and their creator-focused sub-brand BoomBooth Studios. Over a 9-month engagement, built both digital platforms from scratch, owned architecture decisions, and provided ongoing technical guidance as both brands evolved.",
     excerpt:
-      "Worked as a long-term technical partner handling architecture, implementation, and digital infrastructure decisions across multiple business initiatives.",
-    client: "Illumora & BoomBooth Studios",
-    year: "2024 – 2025",
-    engagement: "Technical Partnership · Product Support · Web Engineering",
-    outcome: "Established scalable digital infrastructure supporting brand growth and client acquisition",
-    heroImage: "/work/illumora_banner.png",
-    readTime: "5 min read",
+      "Two brands, one engagement, nine months. Built Illumora's client acquisition surface and BoomBooth Studios' creator platform from the ground up.",
+    client: "Illumora / BoomBooth Studios",
+    year: "2025",
+    engagement: "9-month embedded partnership",
+    outcome:
+      "Both brands launched with scalable digital foundations. Illumora strengthened its online credibility and client acquisition pipeline. BoomBooth Studios went live with a platform built for long-term creator growth.",
+    heroImage: "https://images.unsplash.com/photo-1587216826891-d957f3395dc0?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    readTime: "4 min read",
     featured: true,
     body: [
       {
-        type: "paragraph",
-        text: "Served as the technical development partner for Illumora, a psychological wellness institute based in Bengaluru, alongside their creator-focused sub-brand BoomBooth Studios.",
+        type: "heading",
+        text: "The Brief",
       },
       {
         type: "paragraph",
-        text: "Took ownership of the organization’s digital infrastructure over a 9-month engagement. Built the Illumora website from scratch to serve as the brand’s primary digital presence and client acquisition surface. Also developed BoomBooth Studios’ web platform to support podcast publishing, creator visibility, and personal branding initiatives.",
+        text:
+          "Illumora came in with no digital presence and a clear problem: a credible wellness brand with no surface to acquire clients online. The brief extended to BoomBooth Studios, their creator-focused sub-brand built around podcast publishing and personal branding for founders and creators. Both needed to launch, and both needed to be built right the first time.",
+      },
+      {
+        type: "heading",
+        text: "The Engagement",
       },
       {
         type: "paragraph",
-        text: "Responsibilities extended beyond implementation. Scoped requirements directly with the founder, independently handled architecture and tooling decisions, and provided ongoing technical guidance as the business evolved. Functioned as a long-term technical partner focused on execution, scalability, and operational clarity rather than operating as a delivery-only vendor.",
+        text:
+          "This was not a delivery-only project. From day one, the role was to function as an embedded technical partner: scoping requirements directly with the founder, making independent architecture and tooling decisions, and staying accountable to the business outcome rather than just the deliverable. Over nine months, the engagement evolved as both brands grew, requiring ongoing technical guidance beyond the initial build.",
+      },
+      {
+        type: "heading",
+        text: "What We Built",
       },
       {
         type: "paragraph",
-        text: "The engagement involved balancing evolving business requirements with maintainable implementation choices while ensuring both brands could scale their digital presence without depending on fragmented tooling or external technical coordination.",
+        text:
+          "For Illumora, we built the primary website from scratch to serve as the brand's main client acquisition surface. The focus was on clear service communication, brand credibility, and a clean experience that matched the tone of a premium wellness practice.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "For BoomBooth Studios, we built a separate platform purpose-built for creator visibility: podcast publishing infrastructure, a personal branding layer, and a scalable content architecture that could grow with the studio's roster.",
+      },
+      {
+        type: "heading",
+        text: "How We Worked",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Architecture and tooling decisions were handled independently. Requirements were scoped directly with the founder without external project management overhead. Both platforms were built with maintainability as a core constraint so neither brand would be dependent on us to make routine updates or scale their content.",
+      },
+      {
+        type: "heading",
+        text: "The Outcome",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Both brands launched with a scalable digital foundation. Illumora strengthened its online credibility and client acquisition pipeline. BoomBooth Studios went live with a platform built for long-term creator growth rather than a short-term MVP. The engagement ran for nine months with consistent delivery and no handoff friction.",
+      },
+      {
+        type: "quote",
+        text:
+          "They worked closely with us not just as a service provider, but as a partner who understood our vision and translated it into effective digital solutions. Sameeksha, Founder, Illumora.co",
+
       },
     ],
-  },
+  }
 ];
 
 export const caseStudies = workProjects.filter((p) => p.featured);

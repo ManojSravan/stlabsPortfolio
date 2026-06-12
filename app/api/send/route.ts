@@ -8,7 +8,7 @@ export async function POST(request: Request) {
 
         // 1. Notify you
         const internalEmail = await resend.emails.send({
-            from: `'hello@sravantechlabs.com'}`,
+            from: `hello@sravantechlabs.com`,
             to: ['hello@sravantechlabs.com'],
             subject: `New inquiry from ${name}`,
             html: `
