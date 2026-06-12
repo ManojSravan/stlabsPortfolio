@@ -7,8 +7,8 @@ export async function POST(request: Request) {
         const { name, company, email, budget, message } = await request.json();
 
         // 1. Notify you
-        await resend.emails.send({
-            from: `Contact Email: ${email}`,
+        const internalEmail = await resend.emails.send({
+            from: `'hello@sravantechlabs.com'}`,
             to: ['hello@sravantechlabs.com'],
             subject: `New inquiry from ${name}`,
             html: `
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
         });
 
         // 2. Auto-reply to them
-        await resend.emails.send({
+        const userEmail = await resend.emails.send({
             from: 'Manoj Sravan, <hello@sravantechlabs.com>',
             to: [email],
             subject: 'Got your message.',
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       `,
         });
 
-        return Response.json({ success: true });
+        return Response.json({ success: true, userEmail, internalEmail });
 
     } catch (error) {
         return Response.json({ error }, { status: 500 });
