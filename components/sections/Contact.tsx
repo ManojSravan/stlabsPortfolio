@@ -6,7 +6,18 @@ import { site } from "@/lib/site";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
-
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
+    await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message }),
+    });
+  }
   return (
     <div>
       <PageHero
@@ -22,10 +33,7 @@ export default function Contact() {
       <section>
         <div className="mx-auto max-w-6xl px-6 py-12 md:py-14 grid gap-10 lg:grid-cols-[1.6fr_1fr]">
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
+            onSubmit={handleSubmit}
             className="space-y-8 max-w-2xl"
           >
             <div className="grid sm:grid-cols-2 gap-8">
