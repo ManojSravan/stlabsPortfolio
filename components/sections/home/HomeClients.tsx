@@ -9,7 +9,7 @@ export default function HomeClients() {
     <SectionShell id="clients" className="scroll-mt-28" variant="muted">
       <SectionHeader
         label="Partners"
-        title="Companies we've built with."
+        title="Brands we've partnered with."
         description=""
       />
       <StaggerContainer

@@ -1,33 +1,70 @@
-import { StaggerContainer, StaggerItem } from "@/components/animations";
+"use client";
+
+import { useEffect, useRef } from "react";
 
 const stats = [
-  { value: "10+ Products", label: "Digital experiences delivered." },
-  { value: "6+ Partnerships", label: "Built for growing brands." },
-  { value: "14-day delivery", label: "Fast and reliable execution." },
-  { value: "Remote-First", label: "Async-first execution" },
+  { value: "10+ Products Shipped", label: "End-to-end, no hand-holding." },
+  { value: "6+ Agency Partners", label: "Who trust us with their clients." },
+  { value: "14-Day Delivery", label: "From brief to production-ready." },
+  { value: "Zero Micromanagement", label: "Drop the brief. We handle the rest." },
 ] as const;
 
+const Separator = () => (
+  <span className="mx-10 h-px w-12 bg-background/20 self-center shrink-0 inline-block" />
+);
+
+const StatItem = ({ value, label }: { value: string; label: string }) => (
+  <span className="inline-flex items-center gap-4 shrink-0">
+    <span className="font-serif text-2xl lg:text-3xl tracking-tight text-[var(--accent-light)]">
+      {value}
+    </span>
+    <span className="text-[11px] uppercase tracking-[0.22em] text-background/55">
+      {label}
+    </span>
+  </span>
+);
+
 export default function HomeStats() {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let animFrame: number;
+    let position = 0;
+    const speed = 1;
+
+    const halfWidth = track.scrollWidth / 2;
+
+    const tick = () => {
+      position -= speed;
+      if (Math.abs(position) >= halfWidth) {
+        position = 0;
+      }
+      track.style.transform = `translateX(${position}px)`;
+      animFrame = requestAnimationFrame(tick);
+    };
+
+    animFrame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animFrame);
+  }, []);
+
+  const items = [...stats, ...stats];
+
   return (
-    <section className="border-b border-border/60 bg-foreground text-background">
-      <div className="mx-auto max-w-6xl px-6 py-10 md:py-11">
-        <StaggerContainer
-          staggerDelay={0.15}
-          className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-6"
-        >
-          {stats.map((stat) => (
-            <StaggerItem key={stat.label}>
-              <div className="relative md:pl-6 md:first:pl-0 md:border-l md:first:border-l-0 border-background/15">
-                <p className="font-serif text-3xl md:text-2xl lg:text-3xl tracking-tight text-[var(--accent-light)]">
-                  {stat.value}
-                </p>
-                <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-background/65">
-                  {stat.label}
-                </p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+    <section className="border-b border-border/60 bg-foreground text-background overflow-hidden py-10 md:py-11">
+      <div
+        ref={trackRef}
+        className="flex items-center will-change-transform"
+        style={{ width: "max-content" }}
+      >
+        {items.map((stat, i) => (
+          <span key={i} className="inline-flex items-center shrink-0">
+            <StatItem value={stat.value} label={stat.label} />
+            <Separator />
+          </span>
+        ))}
       </div>
     </section>
   );
