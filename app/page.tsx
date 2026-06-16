@@ -7,6 +7,7 @@ import HomeFAQs from "@/components/sections/home/HomeFAQs";
 import HomeHero from "@/components/sections/home/HomeHero";
 import HomeTechStack from "@/components/sections/home/HomeTechStack";
 import HomeStats from "@/components/sections/home/HomeStats";
+import Pricing from "@/components/sections/Pricing";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://sravantechlabs.com";
@@ -121,7 +122,7 @@ export default function Index() {
 
       <HomeClients />
 
-      {/* <HomeHowWeWork /> */}
+      <Pricing/>
 
       <HomeTechStack />
 

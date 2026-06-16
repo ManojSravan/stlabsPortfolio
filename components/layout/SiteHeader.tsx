@@ -29,7 +29,7 @@ export default function SiteHeader() {
                 {site.name}
               </span>
               <span className="hidden text-[10px] uppercase tracking-[0.28em] text-muted-foreground mt-1 sm:block">
-                {site.tagline}
+                Product Engineering Studio
               </span>
             </span>
           </Link>

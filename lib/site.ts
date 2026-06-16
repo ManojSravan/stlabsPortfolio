@@ -87,16 +87,16 @@ export const serviceLinks = [
 
 export const mainNav: readonly NavEntry[] = [
   {
+     type: "link",
+    label: "Home",
+    href:'/'
+  },
+  {
     type: "dropdown",
     label: "Services",
     items: serviceLinks,
   },
-  {
-    type: "dropdown",
-    label: "Packages",
-    items: packageNavItems,
-    wide: true,
-  },
+  
   {
     type: "dropdown",
     label: "Work",
@@ -126,11 +126,6 @@ export const mainNav: readonly NavEntry[] = [
         href: "/about",
         label: "About us",
         description: "Who we are and what we value.",
-      },
-      {
-        href: "/#why-choose-us",
-        label: "Why choose us",
-        description: "How we work with partners.",
       },
       {
         href: "/#clients",
@@ -198,27 +193,27 @@ export const whyChooseUs = {
 
 export const faqs = [
   {
-    q: "What services does Sravan Tech Labs offer?",
-    a: "We build ecommerce and marketing sites, SaaS products, learning platforms, and landing pages. We also advise on architecture, hiring, and product strategy when the stakes are high.",
+    q: "What does Sravan Tech Labs do?",
+    a: "We help non-technical founders and small startups design, build, and launch digital products. From MVPs and SaaS platforms to internal tools and customer-facing applications, we handle the technical execution so founders can focus on growing the business.",
   },
   {
-    q: "How long does a typical project take?",
-    a: "MVPs and focused launches often land in two to six weeks. Larger platform work runs in phased milestones so you see progress weekly and can adjust before costs compound.",
+    q: "Do I need a technical background to work with you?",
+    a: "Not at all. Most of our clients are domain experts, operators, or founders without an engineering background. We help translate business ideas into clear product requirements and technical solutions.",
   },
   {
-    q: "Do you work with early-stage startups?",
-    a: "Yes. We regularly partner with founder-led teams that need a senior squad without hiring a full in-house product org first.",
+    q: "How long does it take to build a product?",
+    a: "Timelines depend on scope, but most MVPs can be delivered within a few weeks. We break projects into milestones, allowing you to launch quickly, gather feedback, and iterate without unnecessary delays.",
   },
   {
-    q: "What does an engagement look like?",
-    a: "We start with a short discovery call, align on goals and constraints, then run in focused increments with demos, written updates, and direct access to the builders.",
+    q: "Can you help validate my idea before building?",
+    a: "Yes. We can help define requirements, identify the core features worth building first, and create a practical roadmap that minimizes risk and development costs.",
   },
   {
-    q: "Can you work with our existing team?",
-    a: "Absolutely. We embed alongside your engineers and designers, fill gaps where needed, and leave systems your team can maintain after we step back.",
+    q: "What happens after launch?",
+    a: "We provide ongoing support, feature development, performance improvements, and infrastructure guidance to help your product scale as your business grows.",
   },
   {
     q: "How do we get started?",
-    a: "Book a discovery call or email us at hello@sravantechlabs.com. We will respond within one business day with next steps.",
+    a: "Reach out with your idea, business challenge, or product vision. We'll schedule a discovery call, understand your goals, and recommend the best path to move forward.",
   },
 ] as const;

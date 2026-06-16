@@ -3,12 +3,11 @@
 import { useEffect, useRef } from "react";
 
 const stats = [
-  { value: "10+ Products Shipped", label: "End-to-end, no hand-holding." },
-  { value: "6+ Agency Partners", label: "Who trust us with their clients." },
-  { value: "14-Day Delivery", label: "From brief to production-ready." },
-  { value: "Zero Micromanagement", label: "Drop the brief. We handle the rest." },
+  { value: "10+ Products Built", label: "From idea validation to launch." },
+  { value: "Early-Stage Focus", label: "Built for founders and startups." },
+  { value: "Scalable Foundations", label: "Architecture designed for growth." },
+  { value: "End-to-End Delivery", label: "Design, development, and deployment." },
 ] as const;
-
 const Separator = () => (
   <span className="mx-10 h-px w-12 bg-background/20 self-center shrink-0 inline-block" />
 );

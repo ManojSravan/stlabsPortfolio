@@ -12,27 +12,26 @@ export default function HomeHero() {
         <RevealAnimation delay={0}>
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
             <span className="h-px w-8 bg-accent/60" />
-            <span>Technology & Digital Growth Partner · Est. 2023 · India</span>
+            <span>Product Engineering Studio · Est. 2023 · India</span>
           </div>
         </RevealAnimation>
         <RevealAnimation delay={0.1}>
           <h1 className="font-serif mt-8 text-balance text-4xl leading-[1.02] tracking-tight sm:text-5xl md:text-7xl lg:text-[5.25rem] max-w-5xl">
-            Powering the Agencies Behind {" "}
+            Your Product deserves {" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-accent">
-               Great Brands
+               Better Engineering
               </span>
               <span
                 aria-hidden
                 className="absolute -inset-x-1 bottom-1 z-0 h-[0.45em] bg-accent/15"
               />
             </span>{" "}
-             Online
           </h1>
         </RevealAnimation>
         <RevealAnimation delay={0.2}>
           <p className="mt-8 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
-        We partner with creative agencies and consultancies to deliver the engineering and digital execution their clients need - clean storefronts, scalable builds, and reliable delivery, under your name.        </p>
+       From idea to launch, we help non-technical founders and small startups build production-ready products with scalable engineering, modern technology, and a focus on growth.   </p>
         </RevealAnimation>
         <RevealAnimation delay={0.3}>
           <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-5">
@@ -41,13 +40,13 @@ export default function HomeHero() {
               target="_blank"
               className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-4 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
             >
-              Start a Partner Conversation<span aria-hidden></span>
+              Get a Free Discovery Call<span aria-hidden></span>
             </Link>
             <Link
               href="/work"
               className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] border border-border px-6 py-3.5 hover:border-accent hover:text-accent transition-colors"
             >
-See How We Work With Agencies
+See How We Work 
             </Link>
           </div>
         </RevealAnimation>

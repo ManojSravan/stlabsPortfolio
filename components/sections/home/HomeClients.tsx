@@ -18,7 +18,7 @@ export default function HomeClients() {
       >
         {clients.map((client) => (
           <StaggerItem key={client.name}>
-            <div className="flex min-h-[10rem] items-center justify-center border border-border/60 bg-secondary/30 p-4 transition-colors hover:border-accent/30 hover:bg-background">
+            <div className="flex bg-background items-center justify-center border border-border/60   p-4 transition-colors hover:border-accent/30  ">
               <div className="relative h-32 w-full">
                 <Image
                   src={client.logo}

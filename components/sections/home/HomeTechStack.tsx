@@ -73,11 +73,10 @@ export default function HomeTechStack() {
   return (
     <SectionShell id="technologies" className="scroll-mt-28">
       <SectionHeader
-        label="Tech Stack"
-        title="Built on tools agencies already trust."
-        description="Battle-tested tools. Zero onboarding friction.
-"
-      />
+  label="Technology Stack"
+  title="Built with modern technologies that scale."
+  description="We use proven tools and frameworks to build reliable, secure, and maintainable products that grow with your business."
+/>
       <div className="mt-10 overflow-hidden relative">
         {/* Fade masks */}
         <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-background to-transparent" />
