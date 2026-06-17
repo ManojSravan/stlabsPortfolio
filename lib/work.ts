@@ -489,7 +489,7 @@ export const workProjects: WorkProject[] = [
       {
         type: "quote",
         text:
-          "The collaboration felt structured and dependable throughout the engagement. From implementation quality to technical support, the work helped strengthen our digital presence across both brands - Founder, Ojas3D Creatives.",
+          "We partnered with Sravan Tech Labs to build and launch the e-commerce store for Ojas3D Creatives, and we are very happy and satisfied with the results. Their attention to detail, technical expertise, and excellent post-launch support made the entire transition effortless. A truly reliable company that delivers on its promises! - Founder, Ojas3D Creatives.",
       },
     ],
   }
