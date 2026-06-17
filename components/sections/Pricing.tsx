@@ -5,7 +5,6 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/animations";
-
 const TIERS = [
   {
     title: "Website Launch",
@@ -43,23 +42,24 @@ const TIERS = [
     primary: true,
   },
   {
-    title: "Custom Product Engineering",
-    description: "For startups that need advanced features, integrations, or long-term product development.",
-    price: "$2000+",
-    features: [
-      "Everything in MVP Development",
-      "Custom workflows & integrations",
-      "Scalable backend architecture",
-      "Third-party API integrations",
-      "Cloud infrastructure & DevOps",
-      "Dedicated engineering support",
-      "Long-term product partnership",
-    ],
-    cta: "Discuss your project",
-    href: "/contact",
-    popular: false,
-    primary: false,
-  },
+  title: "Monthly Engineering Retainer",
+  description:
+    "Dedicated development support for startups on a flexible monthly basis.",
+  price: "From $499/mo",
+  features: [
+    "Dedicated work hours",
+    "Weekly progress calls",
+    "Sprint tracking",
+    "Product development",
+    "Feature requests",
+    "DevOps support",
+    "Cancel anytime",
+  ],
+  cta: "Start Retainer",
+  href: "/contact",
+  popular: false,
+  primary: false,
+}
 ] as const;
 
 export default function Pricing() {

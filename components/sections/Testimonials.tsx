@@ -5,10 +5,12 @@ import { testimonials } from "@/lib/work";
 import { StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function Testimonials() {
-  const featured = testimonials.slice(0, 2);
+  const featured = testimonials.slice(0, 4);
 
   return (
-    <SectionShell>
+    <>
+    <div className="testimonials-wrapper" id="testimonials">
+      <SectionShell>
       <SectionHeader
         label="Client partners"
         title="Why teams come back."
@@ -25,5 +27,8 @@ export default function Testimonials() {
         ))}
       </StaggerContainer>
     </SectionShell>
+    </div>
+    
+    </>
   );
 }

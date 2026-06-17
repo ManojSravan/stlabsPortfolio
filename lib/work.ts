@@ -393,8 +393,17 @@ export const testimonials: Testimonial[] = [
     company: "Communn.io",
     rating: 5,
   },
-  {
+   {
     id: "2",
+    quote:
+      "We partnered with Sravan Tech Labs to build and launch the e-commerce store for Ojas3D Creatives, and we are very happy and satisfied with the results. Their attention to detail, technical expertise, and excellent post-launch support made the entire transition effortless. A truly reliable company that delivers on its promises!",
+    name: "Team Ojas3D Creatives",
+    role: "Ecommerce Launch",
+    company: "Ojas3D Creatives",
+    rating: 5,
+  },
+  {
+    id: "3",
     quote:
       "The collaboration felt structured and dependable throughout the engagement. From implementation quality to technical support, the work helped strengthen our digital presence across both brands.",
     name: "Team Illumora",
@@ -402,6 +411,15 @@ export const testimonials: Testimonial[] = [
     company: "Illumora & BoomBooth Studios",
     rating: 5,
   },
+ {
+  id: "4",
+  quote:
+    "Working with Sravan Tech Labs on my book launch landing page was a great experience. They delivered a clean, elegant website that perfectly matched my vision and helped present my work professionally. Highly recommended for anyone looking for reliable web development support.",
+  name: "Vamsi Kalle",
+  role: "Author",
+  company: "Independent Author",
+  rating: 5,
+},
 ];
 
 export function getProjectBySlug(slug: string): WorkProject | undefined {

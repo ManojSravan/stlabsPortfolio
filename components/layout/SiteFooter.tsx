@@ -90,7 +90,7 @@ export default function SiteFooter() {
       <div className="border-t border-background/10">
         <div className="mx-auto max-w-6xl px-6 py-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-background/50">
           <span>© {new Date().getFullYear()} {site.name}</span>
-          <span className="uppercase tracking-[0.2em]">{site.tagline}</span>
+          <span className="uppercase tracking-[0.2em]">PRODUCT ENGINEERING STUDIO</span>
         </div>
       </div>
     </footer>
