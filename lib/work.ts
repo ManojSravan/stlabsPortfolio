@@ -214,13 +214,13 @@ export const workProjects: WorkProject[] = [
   {
     slug: "communn-creator-commerce-platform",
     number: "02",
-    title: "Engineering a Full Stack Creator Commerce Platform From the Ground Up",
+    title: "Architecting a Multi-Role Creator Commerce Platform",
     subtitle: "Embedded product engineer for a multi-role influencer and brand commerce platform.",
     category: "Platform Engineering",
     description:
       "Served as a full stack product engineer at Communn.io from May 2025 to February 2026, contributing across frontend and backend development. Took ownership of production deployments, code quality, and platform stability while building core commerce infrastructure connecting brands, influencers, affiliate campaigns, and payouts.",
     excerpt:
-      "Nine months embedded inside a product team, building the influencer commerce infrastructure that powers Communn from campaign creation to automated payouts.",
+      "Ten months embedded inside a product team, building the influencer commerce infrastructure that powers Communn from campaign creation to automated payouts.",
     client: "Communn.io",
     year: "2025 to 2026",
     engagement: "10-month embedded product engineering",
@@ -272,7 +272,7 @@ export const workProjects: WorkProject[] = [
       },
       {
         type: "heading",
-        text: "Tech Stack",
+        text: "Technologies Used",
       },
       {
         type: "paragraph",
@@ -315,7 +315,7 @@ export const workProjects: WorkProject[] = [
     engagement: "9-month embedded partnership",
     outcome:
       "Both brands launched with scalable digital foundations. Illumora strengthened its online credibility and client acquisition pipeline. BoomBooth Studios went live with a platform built for long-term creator growth.",
-    heroImage: "https://images.unsplash.com/photo-1587216826891-d957f3395dc0?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    heroImage: "/work/image.png",
     readTime: "4 min read",
     featured: true,
     body: [
@@ -376,6 +376,122 @@ export const workProjects: WorkProject[] = [
 
       },
     ],
+  },
+  {
+    slug: "3d-printing-headless-shopify-nextjs-platform",
+    number: "03",
+    title: "From Offline Pipeline to a High-Performance Digital Presence in Under 3 Weeks",
+    subtitle: "Product engineering engagement for a 3D printing brand transitioning into a modern online experience.",
+    category: "Web Platform",
+    description:
+      "Worked with a fast-growing 3D printing brand to design and ship a modern online presence within a tight 2–3 week timeline. The engagement focused on clarity of requirements, rapid validation cycles, and a headless architecture using Shopify and Next.js to balance performance, flexibility, and ease of management.",
+    excerpt:
+      "Helped a 3D printing brand move from offline-driven growth to a modern, scalable online presence using a headless Shopify + Next.js architecture.",
+    client: "Ojas3D Creatives",
+    year: "2025",
+    engagement: "2–3 week rapid product build",
+    outcome:
+      "Delivered a validated, production-ready web experience that strengthened brand credibility and enabled the client to expand beyond their existing offline pipeline into higher-value digital opportunities.",
+    heroImage:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    readTime: "3 min read",
+    featured: true,
+
+    body: [
+      {
+        type: "heading",
+        text: "The Context",
+      },
+      {
+        type: "paragraph",
+        text:
+          "A 3D printing brand approached us with a straightforward but critical problem: they already had a consistent customer pipeline, but lacked a professional digital presence that could support larger opportunities, partnerships, and credibility at scale. The challenge was not demand, but perception and positioning.",
+      },
+      {
+        type: "heading",
+        text: "The Real Problem",
+      },
+      {
+        type: "paragraph",
+        text:
+          "While the business was operationally healthy, their online presence did not reflect the maturity of their work. This limited their ability to convert higher-value clients and present themselves as a modern, scalable manufacturing brand in a competitive space.",
+      },
+      {
+        type: "heading",
+        text: "The Approach",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Instead of jumping directly into development, the first step was structured requirement mapping. I worked closely with the client to define goals, constraints, and realistic expectations within a 2–3 week delivery window. This ensured that engineering effort was aligned with business priorities from day one.",
+      },
+      {
+        type: "heading",
+        text: "Technology Decisions",
+      },
+      {
+        type: "paragraph",
+        text:
+          "To balance speed, scalability, and ease of content management, I chose a headless architecture built on Shopify and Next.js. This combination allowed us to separate commerce logic from the frontend experience while maintaining performance and flexibility.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Shopify was used as the commerce and content source, while Next.js handled the frontend experience with a focus on speed, SEO, and modern UI structure.",
+      },
+      {
+        type: "heading",
+        text: "How We Structured Delivery",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The project was split into two clear phases to reduce uncertainty and improve alignment with the client, especially since they were new to structured product development.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Phase 1 focused on building a working sample version of the website to help the client visualize the product early and provide feedback before final implementation decisions were locked.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Phase 2 involved refining scope based on feedback, clearly communicating technical constraints, and proceeding with the final build after validating direction and expectations.",
+      },
+      {
+        type: "heading",
+        text: "Execution Philosophy",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The core principle throughout the engagement was to avoid premature implementation. Instead of writing code immediately, the focus stayed on clarity, validation, and ensuring that what was being built actually matched the business need.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "This reduced rework, improved decision-making speed, and ensured that the final output was both practical and aligned with the client’s operational reality.",
+      },
+      {
+        type: "heading",
+        text: "Outcome",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The final product gave the brand a credible, modern digital presence that better reflected their capabilities. More importantly, it positioned them to move beyond an offline-driven pipeline and start engaging with higher-value digital opportunities.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "The engagement demonstrated that even under tight timelines, structured thinking and early validation can produce production-ready outcomes without compromising quality.",
+      },
+      {
+        type: "quote",
+        text:
+          "The collaboration felt structured and dependable throughout the engagement. From implementation quality to technical support, the work helped strengthen our digital presence across both brands - Founder, Ojas3D Creatives.",
+      },
+    ],
   }
 ];
 
@@ -393,7 +509,7 @@ export const testimonials: Testimonial[] = [
     company: "Communn.io",
     rating: 5,
   },
-   {
+  {
     id: "2",
     quote:
       "We partnered with Sravan Tech Labs to build and launch the e-commerce store for Ojas3D Creatives, and we are very happy and satisfied with the results. Their attention to detail, technical expertise, and excellent post-launch support made the entire transition effortless. A truly reliable company that delivers on its promises!",
@@ -411,15 +527,15 @@ export const testimonials: Testimonial[] = [
     company: "Illumora & BoomBooth Studios",
     rating: 5,
   },
- {
-  id: "4",
-  quote:
-    "Working with Sravan Tech Labs on my book launch landing page was a great experience. They delivered a clean, elegant website that perfectly matched my vision and helped present my work professionally. Highly recommended for anyone looking for reliable web development support.",
-  name: "Vamsi Kalle",
-  role: "Author",
-  company: "Independent Author",
-  rating: 5,
-},
+  {
+    id: "4",
+    quote:
+      "Working with Sravan Tech Labs on my book launch landing page was a great experience. They delivered a clean, elegant website that perfectly matched my vision and helped present my work professionally. Highly recommended for anyone looking for reliable web development support.",
+    name: "Vamsi Kalle",
+    role: "Author",
+    company: "Independent Author",
+    rating: 5,
+  },
 ];
 
 export function getProjectBySlug(slug: string): WorkProject | undefined {
