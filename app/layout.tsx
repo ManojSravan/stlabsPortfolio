@@ -27,18 +27,18 @@ const playfair = Playfair_Display({
 
 // app/page.tsx OR app/layout.tsx
 
- 
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://sravantechlabs.com"),
 
   title: {
     default:
-      "Sravan Tech Labs | Ecommerce Development & Digital Growth Consultancy",
+      "Sravan Tech Labs | Application Development for High-Growth Startups",
     template: "%s | Sravan Tech Labs",
   },
 
   description:
-    "Sravan Tech Labs is a modern ecommerce development and technology consultancy helping startups, ecommerce brands, and businesses build scalable digital products, high-performing storefronts, business websites, and growth-focused web platforms.",
+    "Sravan Tech Labs is a product engineering and application development partner for high-energy startups — building fast, scalable web apps, SaaS platforms, MVPs, and ecommerce experiences that move at startup speed.",
 
   keywords: [
     // Brand
@@ -46,48 +46,63 @@ export const metadata: Metadata = {
     "Sravan Tech Labs India",
     "Sravan Tech Labs Bengaluru",
 
-    // Core Services
-    "Ecommerce Development",
-    "Ecommerce Website Development",
-    "Shopify Development",
-    "Shopify Experts India",
-    "Custom Ecommerce Development",
-    "Next.js Development Agency",
-    "Web Development Agency",
-    "Website Development Company",
+    // Core Positioning
+    "Application Development for Startups",
+    "Startup Application Development",
+    "Product Engineering Agency",
+    "Software Development Partner for Startups",
+    "Web Application Development",
+    "Custom Application Development",
+    "MVP Development Agency",
     "Startup MVP Development",
-    "SaaS Development",
+    "Rapid Application Development",
+    "SaaS Application Development",
+    "SaaS Development Company",
+    "Full Stack Development Agency",
+    "Next.js Application Development",
+    "React Application Development",
+    "Scalable Web Applications",
+    "Product Development Studio",
+    "Startup Tech Partner",
+    "Startup Engineering Team",
+    "Outsourced Product Development",
+    "Fractional CTO Services",
+
+    // Supporting Services
+    "Ecommerce Application Development",
+    "Headless Ecommerce Development",
     "Business Website Development",
     "Landing Page Development",
-    "SEO Optimization Services",
     "Brand Systems",
+    "SEO Optimization Services",
 
     // Intent-based keywords
-    "Best Ecommerce Agency",
-    "Best Web Development Agency",
-    "Best Shopify Agency",
-    "Best Ecommerce Developers India",
-    "Best Digital Agency Bengaluru",
-    "Top Ecommerce Consultants",
-    "Modern Web Development Agency",
-    "Digital Growth Consultancy",
-    "Technology Consultancy India",
+    "Best Application Development Agency",
+    "Best Startup Development Company",
+    "Best Product Engineering Agency India",
+    "Top Software Development Agency for Startups",
+    "Best SaaS Development Company India",
+    "Best Web App Development Agency Bengaluru",
+    "Fast Moving Startup Tech Partner",
+    "High Growth Startup Developers",
 
     // Local SEO
-    "Ecommerce Development Bengaluru",
-    "Web Development Company Bengaluru",
-    "Shopify Developers Bengaluru",
-    "Website Designers Bengaluru",
+    "Application Development Bengaluru",
+    "Startup Software Development Bengaluru",
+    "SaaS Developers Bengaluru",
+    "Web App Development Company Bengaluru",
     "Startup Tech Agency India",
     "Best Agency in Bengaluru",
 
     // Tech keywords
     "Next.js Agency",
     "React Development",
+    "Node.js Development",
     "Vercel Experts",
     "Stripe Integration",
-    "Headless Ecommerce",
-    "Modern Storefront Development",
+    "Cloud Native Application Development",
+    "API Development",
+    "Modern Web Architecture",
   ],
 
   authors: [
@@ -110,10 +125,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Sravan Tech Labs — Ecommerce Development & Digital Growth Consultancy",
+      "Sravan Tech Labs — Application Development for High-Growth Startups",
 
     description:
-      "Helping ecommerce brands and startups build scalable storefronts, digital products, and modern business experiences.",
+      "We build fast, scalable applications, SaaS platforms, and digital products for startups that move at high energy — from MVP to scale.",
 
     url: "https://sravantechlabs.com",
 
@@ -137,10 +152,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "Sravan Tech Labs — Ecommerce Development & Digital Growth Consultancy",
+      "Sravan Tech Labs — Application Development for High-Growth Startups",
 
     description:
-      "Modern storefronts, startup MVPs, scalable digital platforms, and business-focused web experiences.",
+      "Product engineering for fast-moving startups — apps, SaaS platforms, MVPs, and digital products built to scale.",
 
     images: ["/og-image.png"],
 
@@ -170,7 +185,6 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
