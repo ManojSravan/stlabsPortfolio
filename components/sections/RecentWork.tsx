@@ -7,12 +7,12 @@ import { StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function RecentWork() {
   return (
-    <SectionShell>
+    <SectionShell id="case-studies" className="scroll-mt-28">
       <SectionHeader
-        label="Recent work"
-        title="Products we've shipped."
-        description=""
-        action={{ href: "/work", label: "View all work" }}
+        label="Case studies"
+        title="Selected work."
+        description="Recent products — designed, built, and shipped end to end."
+        action={{ href: "/case-studies", label: "View all" }}
       />
       <StaggerContainer
         staggerDelay={0.1}
@@ -26,10 +26,10 @@ export default function RecentWork() {
       </StaggerContainer>
       <div className="mt-8 text-center md:hidden">
         <Link
-          href="/work"
+          href="/case-studies"
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] border border-border px-5 py-3 hover:border-accent hover:text-accent transition-colors"
         >
-          View all work <span aria-hidden>→</span>
+          View all case studies <span aria-hidden>→</span>
         </Link>
       </div>
     </SectionShell>

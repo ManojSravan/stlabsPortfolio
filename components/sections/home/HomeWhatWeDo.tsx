@@ -1,50 +1,74 @@
+import {
+  Code2,
+  Layers,
+  Rocket,
+  RefreshCw,
+  type LucideIcon,
+} from "lucide-react";
 import SectionShell from "@/components/layout/SectionShell";
 
-const practices = [
+const features: {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}[] = [
   {
-    n: "01",
-    t: "Ecommerce & Web",
-    d: "Storefronts and marketing sites built to convert and last.",
+    icon: Layers,
+    title: "Product design",
+    description:
+      "User flows and interfaces shaped before code — so you launch with clarity, not guesswork.",
   },
   {
-    n: "02",
-    t: "SaaS Development",
-    d: "From first prototype to scale, with full-stack product engineering.",
+    icon: Code2,
+    title: "Full-stack engineering",
+    description:
+      "Next.js, React, and modern backends built with architecture that scales as you grow.",
   },
   {
-    n: "03",
-    t: "Learning Platforms",
-    d: "LMS products that respect both learners and instructors.",
+    icon: Rocket,
+    title: "Ship to production",
+    description:
+      "MVPs and full products deployed, tested, and ready for real users from day one.",
   },
   {
-    n: "04",
-    t: "Tech Consultancy",
-    d: "Architecture, hiring, and product strategy when stakes are high.",
+    icon: RefreshCw,
+    title: "Iterate & advise",
+    description:
+      "Stack decisions, rebuilds, and technical direction when the stakes are high.",
   },
-] as const;
+];
 
 export default function HomeWhatWeDo() {
   return (
-    <SectionShell>
-      <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_2fr] md:gap-12">
-        <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">What we do</p>
-          <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
-            Four practices, one team.
-          </h2>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-px bg-border ring-1 ring-border/60">
-          {practices.map((c) => (
-            <div
-              key={c.n}
-              className="group bg-background p-6 md:p-7 transition-colors hover:bg-secondary/30"
-            >
-              <p className="font-serif text-2xl text-accent">{c.n}</p>
-              <h3 className="mt-4 text-base font-medium">{c.t}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.d}</p>
-            </div>
-          ))}
-        </div>
+    <SectionShell id="services" className="scroll-mt-28" variant="muted">
+      <div className="text-center max-w-2xl mx-auto">
+        <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+          What you get
+        </p>
+        <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
+          One builder across the full stack.
+        </h2>
+        <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed">
+          Not an agency. Direct ownership of design, engineering, and delivery —
+          so your product moves fast without losing quality.
+        </p>
+      </div>
+
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {features.map(({ icon: Icon, title, description }) => (
+          <div
+            key={title}
+            className="group border border-border/60 bg-background p-6 md:p-7 transition-colors hover:border-accent/40"
+          >
+            <span className="flex h-10 w-10 items-center justify-center bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+              <Icon className="h-5 w-5" aria-hidden />
+            </span>
+            <h3 className="mt-5 text-base font-medium">{title}</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              {description}
+            </p>
+          </div>
+        ))}
       </div>
     </SectionShell>
   );

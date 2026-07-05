@@ -32,103 +32,48 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sravantechlabs.com"),
 
   title: {
-    default:
-      "Sravan Tech Labs | Application Development for High-Growth Startups",
+    default: "Sravan Tech Labs | Product Engineering Studio",
     template: "%s | Sravan Tech Labs",
   },
 
   description:
-    "Sravan Tech Labs is a product engineering and application development partner for high-energy startups — building fast, scalable web apps, SaaS platforms, MVPs, and ecommerce experiences that move at startup speed.",
+    "Manoj Sravan builds and ships products for founders — MVPs, SaaS platforms, ecommerce, and production-ready web applications.",
 
   keywords: [
-    // Brand
     "Sravan Tech Labs",
-    "Sravan Tech Labs India",
-    "Sravan Tech Labs Bengaluru",
-
-    // Core Positioning
-    "Application Development for Startups",
-    "Startup Application Development",
-    "Product Engineering Agency",
-    "Software Development Partner for Startups",
-    "Web Application Development",
-    "Custom Application Development",
-    "MVP Development Agency",
-    "Startup MVP Development",
-    "Rapid Application Development",
-    "SaaS Application Development",
-    "SaaS Development Company",
-    "Full Stack Development Agency",
-    "Next.js Application Development",
-    "React Application Development",
-    "Scalable Web Applications",
-    "Product Development Studio",
-    "Startup Tech Partner",
-    "Startup Engineering Team",
-    "Outsourced Product Development",
-    "Fractional CTO Services",
-
-    // Supporting Services
-    "Ecommerce Application Development",
-    "Headless Ecommerce Development",
-    "Business Website Development",
-    "Landing Page Development",
-    "Brand Systems",
-    "SEO Optimization Services",
-
-    // Intent-based keywords
-    "Best Application Development Agency",
-    "Best Startup Development Company",
-    "Best Product Engineering Agency India",
-    "Top Software Development Agency for Startups",
-    "Best SaaS Development Company India",
-    "Best Web App Development Agency Bengaluru",
-    "Fast Moving Startup Tech Partner",
-    "High Growth Startup Developers",
-
-    // Local SEO
-    "Application Development Bengaluru",
-    "Startup Software Development Bengaluru",
-    "SaaS Developers Bengaluru",
-    "Web App Development Company Bengaluru",
-    "Startup Tech Agency India",
-    "Best Agency in Bengaluru",
-
-    // Tech keywords
-    "Next.js Agency",
-    "React Development",
-    "Node.js Development",
-    "Vercel Experts",
-    "Stripe Integration",
-    "Cloud Native Application Development",
-    "API Development",
-    "Modern Web Architecture",
+    "Manoj Sravan",
+    "Product Engineering Studio",
+    "Product Engineer",
+    "MVP Development",
+    "SaaS Development",
+    "Startup Product Development",
+    "Next.js Developer",
+    "Bengaluru Product Engineer",
   ],
 
   authors: [
     {
-      name: "Sravan Tech Labs",
+      name: "Manoj Sravan",
       url: "https://sravantechlabs.com",
     },
   ],
 
-  creator: "Sravan Tech Labs",
+  creator: "Manoj Sravan",
   publisher: "Sravan Tech Labs",
 
   applicationName: "Sravan Tech Labs",
 
-  category: "Technology Consultancy",
+  category: "Technology",
 
   alternates: {
     canonical: "https://sravantechlabs.com",
   },
 
   openGraph: {
-    title:
-      "Sravan Tech Labs — Application Development for High-Growth Startups",
+    title: "Sravan Tech Labs — Product Engineering Studio",
 
     description:
-      "We build fast, scalable applications, SaaS platforms, and digital products for startups that move at high energy — from MVP to scale.",
+      "A product engineering studio that designs, builds, and ships software for founders — from MVP to production.",
 
     url: "https://sravantechlabs.com",
 
@@ -151,11 +96,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "Sravan Tech Labs — Application Development for High-Growth Startups",
+    title: "Sravan Tech Labs — Product Engineering Studio",
 
     description:
-      "Product engineering for fast-moving startups — apps, SaaS platforms, MVPs, and digital products built to scale.",
+      "Product engineering studio shipping MVPs, SaaS platforms, and web products for founders.",
 
     images: ["/og-image.png"],
 

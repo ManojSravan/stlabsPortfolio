@@ -1,57 +1,58 @@
 import Image from "next/image";
 import Link from "next/link";
 import ArticleBody from "@/components/work/ArticleBody";
-import type { WorkProject } from "@/lib/work";
+import BlogCard from "@/components/work/BlogCard";
+import { formatBlogDate, type BlogPost } from "@/lib/blogs";
 
-type ProjectArticleProps = {
-  project: WorkProject;
-  related: WorkProject[];
+type BlogArticleProps = {
+  post: BlogPost;
+  related: BlogPost[];
 };
 
-export default function ProjectArticle({ project, related }: ProjectArticleProps) {
+export default function BlogArticle({ post, related }: BlogArticleProps) {
   return (
     <article>
       <header className="border-b border-border/60">
         <div className="mx-auto max-w-5xl px-6 pt-12 pb-10 md:pt-16 md:pb-12">
           <Link
-            href="/case-studies"
+            href="/blogs"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-accent transition-colors"
           >
-            <span aria-hidden>←</span> All case studies
+            <span aria-hidden>←</span> All blogs
           </Link>
           <p className="mt-8 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-            {project.subtitle} · {project.year}
+            {post.category} · {formatBlogDate(post.publishedAt)}
           </p>
           <h1 className="font-serif mt-5 text-3xl sm:text-4xl md:text-5xl leading-[1.08] tracking-tight text-balance">
-            {project.title}
+            {post.title}
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
-            {project.excerpt}
+            {post.excerpt}
           </p>
           <dl className="mt-10 grid gap-6 sm:grid-cols-2 border-t border-border/60 pt-8 text-sm">
             <div>
               <dt className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                Client
+                Author
               </dt>
-              <dd className="mt-2 font-medium">{project.client}</dd>
+              <dd className="mt-2 font-medium">{post.author}</dd>
             </div>
             <div>
               <dt className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                Engagement
+                Published
               </dt>
-              <dd className="mt-2 font-medium">{project.engagement}</dd>
+              <dd className="mt-2 font-medium">{formatBlogDate(post.publishedAt)}</dd>
             </div>
             <div>
               <dt className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                Outcome
+                Category
               </dt>
-              <dd className="mt-2 font-medium">{project.outcome}</dd>
+              <dd className="mt-2 font-medium">{post.category}</dd>
             </div>
             <div>
               <dt className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
                 Read time
               </dt>
-              <dd className="mt-2 font-medium">{project.readTime}</dd>
+              <dd className="mt-2 font-medium">{post.readTime}</dd>
             </div>
           </dl>
         </div>
@@ -60,8 +61,8 @@ export default function ProjectArticle({ project, related }: ProjectArticleProps
       <figure className="mx-auto max-w-5xl px-6 py-10 md:py-14">
         <div className="overflow-hidden border border-border/60 bg-secondary/40">
           <Image
-            src={project.heroImage}
-            alt={project.title}
+            src={post.heroImage}
+            alt={post.title}
             width={1400}
             height={788}
             className="w-full h-auto"
@@ -71,36 +72,20 @@ export default function ProjectArticle({ project, related }: ProjectArticleProps
       </figure>
 
       <div className="mx-auto max-w-2xl px-6 pb-20 md:pb-28">
-        <ArticleBody blocks={project.body} />
+        <ArticleBody blocks={post.body} />
       </div>
 
       {related.length > 0 ? (
         <aside className="border-t border-border/60 bg-secondary/30">
           <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              More from our studio
+              More to read
             </p>
-            <h2 className="font-serif text-2xl md:text-3xl mt-4">Related work</h2>
-            <ul className="mt-10 grid gap-8 md:grid-cols-2">
+            <div className="mt-10 grid gap-10 md:grid-cols-2 md:gap-x-10 md:gap-y-14">
               {related.map((item) => (
-                <li key={item.slug}>
-                  <Link
-                    href={`/case-studies/${item.slug}`}
-                    className="group block border border-border/60 bg-background p-6 md:p-8 hover:border-accent/35 transition-colors"
-                  >
-                    <p className="text-[11px] uppercase tracking-[0.2em] text-accent">
-                      {item.subtitle}
-                    </p>
-                    <h3 className="font-serif mt-3 text-xl leading-snug group-hover:text-accent transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm text-muted-foreground line-clamp-2">
-                      {item.description}
-                    </p>
-                  </Link>
-                </li>
+                <BlogCard key={item.slug} post={item} />
               ))}
-            </ul>
+            </div>
           </div>
         </aside>
       ) : null}

@@ -8,13 +8,11 @@ export default function Testimonials() {
   const featured = testimonials.slice(0, 4);
 
   return (
-    <>
-    <div className="testimonials-wrapper" id="testimonials">
-      <SectionShell>
+    <SectionShell id="testimonials" className="scroll-mt-28" variant="subtle">
       <SectionHeader
-        label="Client partners"
-        title="Why teams come back."
-        description=""
+        label="Testimonials"
+        title="Words from collaborators."
+        description="Direct feedback from founders and teams I've worked with."
       />
       <StaggerContainer
         staggerDelay={0.15}
@@ -27,8 +25,5 @@ export default function Testimonials() {
         ))}
       </StaggerContainer>
     </SectionShell>
-    </div>
-    
-    </>
   );
 }

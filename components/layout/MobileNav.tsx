@@ -1,16 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
-import { mainNav, site } from "@/lib/site";
+import { useEffect, useState } from "react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import NavLink from "./NavLink";
+import { headerCta, mainNav, site } from "@/lib/site";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
-  const [expanded, setExpanded] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
-    <div className="relative md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         aria-expanded={open}
@@ -22,66 +29,54 @@ export default function MobileNav() {
       </button>
 
       {open ? (
-        <div className="absolute right-0 top-full z-50 mt-2 w-[min(100vw-3rem,20rem)] max-h-[min(70vh,28rem)] overflow-y-auto border border-border/60 bg-background shadow-lg">
-          <nav className="flex flex-col p-2" aria-label="Mobile">
-            {mainNav.map((entry) =>
-              entry.type === "link" ? (
-                <Link
-                  key={entry.href}
-                  href={entry.href}
-                  onClick={() => setOpen(false)}
-                  className="px-3 py-3 text-sm hover:bg-secondary/80 hover:text-accent transition-colors"
-                >
-                  {entry.label}
-                </Link>
-              ) : (
-                <div key={entry.label} className="border-b border-border/40 last:border-0">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setExpanded((v) => (v === entry.label ? null : entry.label))
-                    }
-                    className="flex w-full items-center justify-between px-3 py-3 text-sm hover:bg-secondary/80 hover:text-accent transition-colors"
-                    aria-expanded={expanded === entry.label}
-                  >
-                    {entry.label}
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform ${
-                        expanded === entry.label ? "rotate-180" : ""
-                      }`}
-                      aria-hidden
+        <>
+          <button
+            type="button"
+            aria-label="Close menu"
+            className="fixed inset-0 z-40 bg-foreground/20 backdrop-blur-[2px]"
+            onClick={() => setOpen(false)}
+          />
+          <div className="fixed inset-x-0 top-[4.25rem] z-50 border-b border-border/60 bg-background shadow-xl">
+            <nav className="mx-auto max-w-7xl px-6 py-6" aria-label="Mobile">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+                {site.tagline}
+              </p>
+              <ul className="mt-5 divide-y divide-border/60">
+                {mainNav.map((entry) => (
+                  <li key={entry.href}>
+                    <NavLink
+                      href={entry.href}
+                      label={entry.label}
+                      onClick={() => setOpen(false)}
+                      className="flex w-full items-center justify-between py-4 text-base"
+                      activeClassName="text-foreground"
+                      inactiveClassName="text-foreground/80 hover:text-accent"
                     />
-                  </button>
-                  {expanded === entry.label ? (
-                    <ul className="pb-2 pl-2">
-                      {entry.items.map((item) => (
-                        <li key={item.label}>
-                          <Link
-                            href={item.href}
-                            onClick={() => setOpen(false)}
-                            className="block px-3 py-2 text-sm text-muted-foreground hover:text-accent transition-colors"
-                          >
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </div>
-              )
-            )}
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="mx-2 mt-2 inline-flex items-center justify-center gap-2 bg-foreground text-background px-4 py-3 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
-            >
-              Start a project <span aria-hidden>→</span>
-            </Link>
-            <p className="px-3 pt-4 pb-2 text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-              {site.tagline}
-            </p>
-          </nav>
-        </div>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 flex flex-col gap-3">
+                <Link
+                  href={headerCta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-5 py-4 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
+                >
+                  {headerCta.label}
+                  <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+                </Link>
+                <a
+                  href={`mailto:${site.email}`}
+                  onClick={() => setOpen(false)}
+                  className="inline-flex items-center justify-center gap-2 border border-border px-5 py-3.5 text-xs uppercase tracking-[0.18em] hover:border-accent hover:text-accent transition-colors"
+                >
+                  {site.email}
+                </a>
+              </div>
+            </nav>
+          </div>
+        </>
       ) : null}
     </div>
   );

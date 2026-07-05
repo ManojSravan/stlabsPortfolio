@@ -1,5 +1,16 @@
 import SectionShell from "@/components/layout/SectionShell";
-import { whyChooseUs } from "@/lib/site";
+
+const whyChooseUs = {
+  title: "Why work with me?",
+  points: [
+    "Direct collaboration — no account managers or handoffs",
+    "Hands-on building from scope through production",
+    "Practical architecture chosen for long-term stability",
+    "Clear communication and honest trade-offs",
+    "Async-first, works with teams worldwide",
+    "Focused on shipping outcomes, not process theatre",
+  ],
+} as const;
 
 export default function HomeWhyChooseUs() {
   return (

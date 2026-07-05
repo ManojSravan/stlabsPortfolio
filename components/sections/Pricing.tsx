@@ -5,77 +5,77 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/animations";
+import { headerCta } from "@/lib/site";
+
 const TIERS = [
   {
-    title: "App Launch",
-    description: "Launch a polished mobile app — plus a promotional landing page to drive downloads and signups.",
-    price: "$799",
+    title: "Discovery",
+    description:
+      "A focused intro call and product scoping session — free, no commitment.",
+    price: "Free",
     features: [
-      "Custom mobile app design (iOS & Android)",
-      "React Native / Expo development",
-      "1 promotional landing page included",
-      "App store-ready build",
-      "Deployment & launch support",
-      "1 week delivery",
+      "30-minute intro call",
+      "Scope and timeline estimate",
+      "Honest fit assessment",
+      "No sales pressure",
     ],
-    cta: "Get your app",
-    href: "/contact",
+    cta: "Book a call",
+    href: headerCta.href,
     popular: false,
     primary: false,
   },
   {
-    title: "Startup Launch",
-    description: "Turn your idea into a market-ready app with strategy, design, and engineering.",
-    price: "$1299+",
+    title: "MVP Build",
+    description:
+      "Turn your idea into a market-ready product with design and engineering.",
+    price: "From $2,500",
     features: [
       "Product discovery workshop",
-      "Market & competitor research",
       "UI/UX design",
-      "Mobile app development (web companion available)",
-      "Deployment & infrastructure setup",
+      "Full-stack development",
+      "Deployment & infrastructure",
       "Weekly progress updates",
-      "Founder-friendly technical guidance",
+      "Founder-friendly guidance",
     ],
-    cta: "Build your startup",
-    href: "/contact",
-    popular: false,
-    primary: false,
+    cta: "Build your MVP",
+    href: headerCta.href,
+    popular: true,
+    primary: true,
   },
   {
-    title: "Monthly Engineering Retainer",
+    title: "Retainer",
     description:
-      "Dedicated development support for startups on a flexible monthly basis.",
+      "Dedicated development support on a flexible monthly basis.",
     price: "From $499/mo",
     features: [
       "Dedicated work hours",
       "Weekly progress calls",
-      "Sprint tracking",
-      "Product development",
-      "Feature requests",
+      "Feature development",
       "DevOps support",
       "Cancel anytime",
+      "Priority response",
     ],
-    cta: "Start Retainer",
-    href: "/contact",
-    popular: true,
-    primary: true,
+    cta: "Start retainer",
+    href: headerCta.href,
+    popular: false,
+    primary: false,
   },
 ] as const;
 
 export default function Pricing() {
   return (
-    <SectionShell id="pricing" variant="subtle">
+    <SectionShell id="pricing" className="scroll-mt-28" variant="subtle">
       <RevealAnimation className="text-center max-w-2xl mx-auto">
         <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
           Pricing
         </p>
         <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
-          Packages that scale with you
+          Transparent pricing, no surprises.
         </h2>
-        {/*<p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          Fixed scopes with clear deliverables. Open a package page for full
-          details.
-        </p>*/}
+        <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+          Fixed scopes with clear deliverables. Every tier includes direct
+          collaboration — no account managers.
+        </p>
       </RevealAnimation>
 
       <StaggerContainer
@@ -120,6 +120,8 @@ export default function Pricing() {
 
               <Link
                 href={tier.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`mt-6 inline-flex items-center justify-center px-6 py-3 text-sm transition-colors ${
                   tier.primary
                     ? "bg-accent text-accent-foreground hover:bg-foreground hover:text-background"

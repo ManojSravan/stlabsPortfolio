@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import RecentBlogs from "@/components/sections/RecentBlogs";
 import RecentWork from "@/components/sections/RecentWork";
-import Testimonials from "@/components/sections/Testimonials";
-import HomeClients from "@/components/sections/home/HomeClients";
-import HomeCTA from "@/components/sections/home/HomeCTA";
-import HomeFAQs from "@/components/sections/home/HomeFAQs";
-import HomeHero from "@/components/sections/home/HomeHero";
-import HomeTechStack from "@/components/sections/home/HomeTechStack";
-import HomeStats from "@/components/sections/home/HomeStats";
 import Pricing from "@/components/sections/Pricing";
+import Founder from "@/components/sections/Founder";
+import HomeFAQs from "@/components/sections/home/HomeFAQs";
+import HomeFinalCTA from "@/components/sections/home/HomeFinalCTA";
+import HomeHero from "@/components/sections/home/HomeHero";
+import HomeSocialProof from "@/components/sections/home/HomeSocialProof";
+import HomeSocialTestimonials from "@/components/sections/home/HomeSocialTestimonials";
+import HomeWhatWeDo from "@/components/sections/home/HomeWhatWeDo";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://sravantechlabs.com";
@@ -16,103 +17,48 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sravantechlabs.com"),
 
   title: {
-    default:
-      "Sravan Tech Labs | Application Development for High-Growth Startups",
+    default: "Sravan Tech Labs | Product Engineering Studio",
     template: "%s | Sravan Tech Labs",
   },
 
   description:
-    "Sravan Tech Labs is a product engineering and application development partner for high-energy startups — building fast, scalable web apps, SaaS platforms, MVPs, and ecommerce experiences that move at startup speed.",
+    "Manoj Sravan builds and ships products for founders — MVPs, SaaS platforms, ecommerce, and production-ready web applications.",
 
   keywords: [
-    // Brand
     "Sravan Tech Labs",
-    "Sravan Tech Labs India",
-    "Sravan Tech Labs Bengaluru",
-
-    // Core Positioning
-    "Application Development for Startups",
-    "Startup Application Development",
-    "Product Engineering Agency",
-    "Software Development Partner for Startups",
-    "Web Application Development",
-    "Custom Application Development",
-    "MVP Development Agency",
-    "Startup MVP Development",
-    "Rapid Application Development",
-    "SaaS Application Development",
-    "SaaS Development Company",
-    "Full Stack Development Agency",
-    "Next.js Application Development",
-    "React Application Development",
-    "Scalable Web Applications",
-    "Product Development Studio",
-    "Startup Tech Partner",
-    "Startup Engineering Team",
-    "Outsourced Product Development",
-    "Fractional CTO Services",
-
-    // Supporting Services
-    "Ecommerce Application Development",
-    "Headless Ecommerce Development",
-    "Business Website Development",
-    "Landing Page Development",
-    "Brand Systems",
-    "SEO Optimization Services",
-
-    // Intent-based keywords
-    "Best Application Development Agency",
-    "Best Startup Development Company",
-    "Best Product Engineering Agency India",
-    "Top Software Development Agency for Startups",
-    "Best SaaS Development Company India",
-    "Best Web App Development Agency Bengaluru",
-    "Fast Moving Startup Tech Partner",
-    "High Growth Startup Developers",
-
-    // Local SEO
-    "Application Development Bengaluru",
-    "Startup Software Development Bengaluru",
-    "SaaS Developers Bengaluru",
-    "Web App Development Company Bengaluru",
-    "Startup Tech Agency India",
-    "Best Agency in Bengaluru",
-
-    // Tech keywords
-    "Next.js Agency",
-    "React Development",
-    "Node.js Development",
-    "Vercel Experts",
-    "Stripe Integration",
-    "Cloud Native Application Development",
-    "API Development",
-    "Modern Web Architecture",
+    "Manoj Sravan",
+    "Product Engineering Studio",
+    "Product Engineer",
+    "MVP Development",
+    "SaaS Development",
+    "Startup Product Development",
+    "Next.js Developer",
+    "Bengaluru Product Engineer",
   ],
 
   authors: [
     {
-      name: "Sravan Tech Labs",
+      name: "Manoj Sravan",
       url: "https://sravantechlabs.com",
     },
   ],
 
-  creator: "Sravan Tech Labs",
+  creator: "Manoj Sravan",
   publisher: "Sravan Tech Labs",
 
   applicationName: "Sravan Tech Labs",
 
-  category: "Technology Consultancy",
+  category: "Technology",
 
   alternates: {
     canonical: "https://sravantechlabs.com",
   },
 
   openGraph: {
-    title:
-      "Sravan Tech Labs — Application Development for High-Growth Startups",
+    title: "Sravan Tech Labs — Product Engineering Studio",
 
     description:
-      "We build fast, scalable applications, SaaS platforms, and digital products for startups that move at high energy — from MVP to scale.",
+      "A product engineering studio that designs, builds, and ships software for founders — from MVP to production.",
 
     url: "https://sravantechlabs.com",
 
@@ -135,11 +81,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "Sravan Tech Labs — Application Development for High-Growth Startups",
+    title: "Sravan Tech Labs — Product Engineering Studio",
 
     description:
-      "Product engineering for fast-moving startups — apps, SaaS platforms, MVPs, and digital products built to scale.",
+      "Product engineering studio shipping MVPs, SaaS platforms, and web products for founders.",
 
     images: ["/og-image.png"],
 
@@ -171,77 +116,48 @@ export const metadata: Metadata = {
 };
 
 export default function Index() {
-  // JSON-LD Schema for Professional Services
-  const organizationSchema = {
+  const personSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Sravan Tech Labs",
-    image: `${siteUrl}/logostlabs.png`,
+    "@type": "Person",
+    name: "Manoj Sravan",
     url: siteUrl,
-    telephone: "+91-6300018219",
+    image: `${siteUrl}/founderimage.jpeg`,
+    jobTitle: "Founder",
+    worksFor: {
+      "@type": "Organization",
+      name: "Sravan Tech Labs",
+      description: "Product Engineering Studio",
+      url: siteUrl,
+    },
     email: "hello@sravantechlabs.com",
-    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bengaluru",
       addressRegion: "Karnataka",
-      postalCode: "560001",
       addressCountry: "IN",
     },
-    areaServed: {
-      "@type": "Country",
-      name: "Worldwide",
-    },
-    serviceType: [
-      "E-commerce Storefront Development",
-      "Landing Page Design & Development",
-      "MVP Development",
-      "SaaS Development",
-      "Learning Platform Development",
-      "Technical Consultancy",
-      "Product Architecture",
-      "SEO Optimization",
-    ],
     knowsAbout: [
       "Next.js",
       "React",
-      "Shopify",
-      "TypeScript",
-      "Tailwind CSS",
       "Product Development",
-      "Web Performance",
-      "SEO",
+      "SaaS",
+      "Ecommerce",
+      "MVP Development",
     ],
-    founder: {
-      "@type": "Person",
-      name: "Manoj Sravan",
-      url: "https://linkedin.com/in/manojsravan/",
-    },
     sameAs: [
-      "https://linkedin.com/company/sravantechlabs",
+      "https://linkedin.com/in/manojsravan/",
       "https://twitter.com/sravantechlabs",
       "https://github.com/sravantechlabs",
-      "https://instagram.com/sravantechlabs",
     ],
     description:
-      "Product development and consulting studio building thoughtful software for ambitious teams worldwide. Specializing in e-commerce storefronts, landing pages, MVPs, and technical consultancy.",
-    startDate: "2020",
+      "Founder of Sravan Tech Labs, a product engineering studio helping founders design, build, and ship software.",
   };
 
-  // JSON-LD Schema for Website
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Sravan Tech Labs",
     url: siteUrl,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteUrl}?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (
@@ -249,7 +165,7 @@ export default function Index() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
+          __html: JSON.stringify(personSchema),
         }}
         suppressHydrationWarning
       />
@@ -261,22 +177,15 @@ export default function Index() {
         suppressHydrationWarning
       />
       <HomeHero />
-      <HomeStats />
-
+      <HomeSocialProof />
+      <HomeWhatWeDo />
+      <Founder />
       <RecentWork />
-
-      <HomeClients />
-
-      <Pricing/>
-
-      <HomeTechStack />
-
-      <Testimonials />
- 
-
+      <RecentBlogs />
+      <Pricing />
       <HomeFAQs />
-
-      <HomeCTA />
+      <HomeSocialTestimonials />
+      <HomeFinalCTA />
     </>
   );
 }

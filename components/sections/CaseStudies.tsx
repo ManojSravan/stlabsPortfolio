@@ -11,7 +11,7 @@ export default function CaseStudies() {
           label="Case studies"
           title="From discovery to shipped."
           description="In-depth stories of problems we solved, processes we followed, and products that are running in production."
-          action={{ href: "/work", label: "View all work" }}
+          action={{ href: "/case-studies", label: "View all" }}
         />
         <div className="mt-14 grid gap-10 md:grid-cols-2 md:gap-x-10 md:gap-y-14">
           {caseStudies.map((project) => (
@@ -20,7 +20,7 @@ export default function CaseStudies() {
         </div>
         <div className="mt-14 flex justify-center">
           <Link
-            href="/work"
+            href="/case-studies"
             className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3.5 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
           >
             Explore all projects <span aria-hidden>→</span>

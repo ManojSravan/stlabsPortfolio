@@ -1,69 +1,59 @@
-import Image from "next/image";
 import Link from "next/link";
+import SectionShell from "@/components/layout/SectionShell";
 import { site } from "@/lib/site";
 
 export default function Founder() {
   const { founder } = site;
 
   return (
-    <section className="border-t border-border/60">
-      <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
+    <SectionShell id="about" className="scroll-mt-28" border={false}>
+      <div className="mx-auto max-w-2xl text-center">
         <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          From the founder
+          Founder&apos;s note
         </p>
 
-        <div className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-16 lg:items-start">
-          <div className="relative aspect-[3/4] max-w-md overflow-hidden border border-border/80 bg-secondary/40 ring-1 ring-border/60">
-            <Image
-              src={founder.image}
-              alt={founder.imageAlt}
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 1024px) 100vw, 352px"
-              priority={false}
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent"
-            />
-          </div>
+        <div className="relative mt-8">
+          <span
+            aria-hidden
+            className="font-serif text-7xl md:text-8xl leading-none text-accent/15 select-none"
+          >
+            &ldquo;
+          </span>
+          <h2 className="font-serif -mt-10 md:-mt-12 text-2xl md:text-[1.75rem] leading-snug text-balance text-foreground">
+            {founder.headline}
+          </h2>
+        </div>
 
-          <div className="max-w-2xl">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] leading-tight text-balance">
-              {founder.headline}
-            </h2>
+        <p className="mt-8 mx-auto max-w-prose text-base md:text-[1.0625rem] leading-relaxed text-muted-foreground">
+          {founder.note}
+        </p>
 
-            <div className="mt-6 space-y-5 text-base leading-relaxed text-foreground/90">
-              {founder.bio.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
+        <div className="mt-10 pt-8 border-t border-border/60">
+          <p
+            className="font-serif text-xl md:text-2xl italic text-foreground/85"
+            aria-label="Signature"
+          >
+            — {founder.signature}
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            <span className="text-foreground font-medium">{founder.name}</span>
+            <span className="mx-2 text-border" aria-hidden>
+              |
+            </span>
+            {founder.role}
+          </p>
 
-            <p
-              className="mt-6 font-serif text-2xl italic text-foreground/80"
-              aria-label="Signature"
-            >
-              {founder.signature}
-            </p>
-
-            <p className="mt-1 text-sm text-muted-foreground">
-              <span className="text-foreground">{founder.name}</span>
-              {" · "}
-              {founder.role}
-            </p>
-
-            <Link
-              href={founder.ctaHref}
-              className="mt-4 inline-flex items-center gap-2 text-sm border-b border-foreground pb-0.5 hover:text-accent hover:border-accent transition-colors"
-            >
-              <span aria-hidden className="text-accent">
-                ↳
-              </span>
-              {founder.ctaLabel}
-            </Link>
-          </div>
+          <Link
+            href={founder.ctaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-accent hover:underline underline-offset-4"
+          >
+            {founder.ctaLabel}
+            <span aria-hidden>→</span>
+          </Link>
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

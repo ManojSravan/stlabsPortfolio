@@ -1,30 +1,30 @@
 import Link from "next/link";
 import PageHero from "@/components/layout/PageHero";
-import ProjectCard from "@/components/work/ProjectCard";
+import BlogCard from "@/components/work/BlogCard";
 import { site } from "@/lib/site";
-import { workProjects } from "@/lib/work";
+import { blogPosts } from "@/lib/blogs";
 
-export default function Work() {
+export default function Blogs() {
   return (
     <div>
       <PageHero
-        label="Case studies"
+        label="Blogs"
         title={
           <>
-            Products I&apos;ve <span className="text-accent">shipped.</span>
+            Notes from the <span className="text-accent">build.</span>
           </>
         }
-        description="Selected work across ecommerce, SaaS, creator tools, and learning platforms."
+        description="Thoughts on product, engineering, and building independently."
       />
 
       <section>
         <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-10">
-            All case studies
+            All articles
           </p>
-          <div className="grid gap-10 md:grid-cols-2 md:gap-x-10 md:gap-y-14">
-            {workProjects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+          <div className="grid gap-8 md:gap-10 max-w-3xl mx-auto">
+            {blogPosts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
             ))}
           </div>
         </div>
