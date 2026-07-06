@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { RevealAnimation } from "@/components/animations";
-import { headerCta } from "@/lib/site";
+import { headerCta, heroStats } from "@/lib/site";
 
 export default function HomeHero() {
   return (
@@ -15,16 +15,19 @@ export default function HomeHero() {
           <div>
             <RevealAnimation delay={0}>
               <h1 className="font-serif text-balance text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-[3.5rem]">
-                Ship your product without agency overhead.
+                Your Product Deserves Better Engineering.
               </h1>
             </RevealAnimation>
+            
             <RevealAnimation delay={0.1}>
-              <p className="mt-6 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed">
-                We design, build, and deploy production-ready MVPs and SaaS
-                platforms. Direct collaboration from first sketch to launch.
+              <p className="mt-4 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed">
+                Launch your MVP in weeks, then keep shipping features through a
+                dedicated product engineering partnership.
               </p>
             </RevealAnimation>
-            <RevealAnimation delay={0.2}>
+           
+           
+            <RevealAnimation delay={0.25}>
               <div className="mt-10">
                 <Link
                   href={headerCta.href}
@@ -32,7 +35,7 @@ export default function HomeHero() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
                 >
-                  Start for free
+                  {headerCta.label}
                 </Link>
               </div>
             </RevealAnimation>

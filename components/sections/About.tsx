@@ -26,10 +26,9 @@ export default function About() {
             </p>
             <div className="space-y-6 text-base leading-relaxed max-w-2xl text-foreground/90">
               <p>
-                Sravan Tech Labs is a product development and consulting studio.
-                We&apos;re a tight-knit team of engineers, designers, and
-                product thinkers who care more about shipping good software than
-                chasing trends.
+                Sravan Tech Labs is a product engineering studio. We&apos;re a
+                tight-knit team of engineers, designers, and product thinkers
+                who care more about shipping good software than chasing trends.
               </p>
               <p>
                 Our clients lean on us for clarity. Whether it&apos;s a first

@@ -6,7 +6,7 @@ export const site = {
   studioLabel: "Product Engineering Studio",
   tagline: "Build · Ship · Iterate",
   description:
-    "Product engineering studio helping founders design, build, and ship software that holds up in production.",
+    "Product engineering studio partnering with early-stage founders to design, build, and continuously improve SaaS products—from MVP to scale.",
   email: "hello@sravantechlabs.com",
   phone: "+91 63000 18219",
   phoneHref: "tel:+916300018219",
@@ -65,9 +65,15 @@ export const faqs = [
 ] as const;
 
 export const headerCta = {
-  label: "Start for free",
+  label: "Book a Discovery Call",
   href: "https://cal.com/manoj-sravan-annivg/starterlaunch",
 } as const;
+
+export const heroStats = [
+  { value: "20+", label: "Startups partnered" },
+  { value: "10+", label: "Products built" },
+  { value: "6+", label: "Years in product engineering" },
+] as const;
 
 /** Flat links for footer and simple menus */
 export const navLinks = [

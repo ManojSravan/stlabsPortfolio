@@ -18,7 +18,7 @@ export default function HomeFinalCTA() {
           rel="noopener noreferrer"
           className="mt-8 inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 text-xs uppercase tracking-[0.18em] hover:bg-[var(--accent-light)] transition-colors"
         >
-          Start for free
+          {headerCta.label}
         </Link>
       </div>
     </section>

@@ -4,9 +4,9 @@ import PageHero from "@/components/layout/PageHero";
 const SERVICES = [
   {
     n: "01",
-    title: "Ecommerce & Web Development",
+    title: "Ecommerce & Product Engineering",
     summary:
-      "Storefronts, marketing sites, and bespoke commerce experiences engineered to convert and scale.",
+      "Commerce products and storefronts engineered to convert, scale, and hold up under real transaction volume.",
     points: [
       "Shopify, Medusa, and custom stacks",
       "Headless commerce architectures",
@@ -66,10 +66,11 @@ export default function Services() {
         label="Services"
         title={
           <>
-            We build <span className="text-accent">products that grow.</span>
+            We help founders build and scale{" "}
+            <span className="text-accent">software products.</span>
           </>
         }
-        description="Ecommerce storefronts, SaaS platforms, learning systems, landing pages, and technical strategy for founders and engineering leaders."
+        description="Product engineering for ecommerce platforms, SaaS products, learning systems, and technical strategy—from MVP to scale."
       />
 
       <section>

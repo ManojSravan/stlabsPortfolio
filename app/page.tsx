@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Sravan Tech Labs designs, builds, and ships products for founders: MVPs, SaaS platforms, ecommerce, and production-ready web applications.",
+    "Sravan Tech Labs partners with early-stage founders to design, build, and continuously improve SaaS products—from MVP to scale.",
 
   keywords: [
     "Sravan Tech Labs",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Sravan Tech Labs | Product Engineering Studio",
 
     description:
-      "A product engineering studio that designs, builds, and ships software for founders, from MVP to production.",
+      "Product engineering studio partnering with early-stage founders to design, build, and continuously improve SaaS products—from MVP to scale.",
 
     url: "https://sravantechlabs.com",
 
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     title: "Sravan Tech Labs | Product Engineering Studio",
 
     description:
-      "Product engineering studio shipping MVPs, SaaS platforms, and web products for founders.",
+      "Product engineering studio helping founders build and scale software products—from MVP to production.",
 
     images: ["/og-image.png"],
 
@@ -180,14 +180,14 @@ export default function Index() {
       <HomeHero />
       <HomeProductCarousel />
       <HomeSocialProof />
+      <HomeWhatWeDo />
       <RecentWork />
       <Founder />
       <Pricing />
       <RecentBlogs />
+      <HomeFAQs />
       <HomeSocialTestimonials />
       <HomeFinalCTA />
-      <HomeWhatWeDo />
-      <HomeFAQs />
     </>
   );
 }
