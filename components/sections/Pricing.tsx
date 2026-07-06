@@ -1,66 +1,28 @@
 import Link from "next/link";
+import { Check } from "lucide-react";
 import SectionShell from "@/components/layout/SectionShell";
-import {
-  RevealAnimation,
-  StaggerContainer,
-  StaggerItem,
-} from "@/components/animations";
+import { RevealAnimation } from "@/components/animations";
 import { headerCta } from "@/lib/site";
 
-const TIERS = [
-  {
-    title: "Discovery",
-    description:
-      "A focused intro call and product scoping session — free, no commitment.",
-    price: "Free",
-    features: [
-      "30-minute intro call",
-      "Scope and timeline estimate",
-      "Honest fit assessment",
-      "No sales pressure",
-    ],
-    cta: "Book a call",
-    href: headerCta.href,
-    popular: false,
-    primary: false,
-  },
-  {
-    title: "MVP Build",
-    description:
-      "Turn your idea into a market-ready product with design and engineering.",
-    price: "From $2,500",
-    features: [
-      "Product discovery workshop",
-      "UI/UX design",
-      "Full-stack development",
-      "Deployment & infrastructure",
-      "Weekly progress updates",
-      "Founder-friendly guidance",
-    ],
-    cta: "Build your MVP",
-    href: headerCta.href,
-    popular: true,
-    primary: true,
-  },
-  {
-    title: "Retainer",
-    description:
-      "Dedicated development support on a flexible monthly basis.",
-    price: "From $499/mo",
-    features: [
-      "Dedicated work hours",
-      "Weekly progress calls",
-      "Feature development",
-      "DevOps support",
-      "Cancel anytime",
-      "Priority response",
-    ],
-    cta: "Start retainer",
-    href: headerCta.href,
-    popular: false,
-    primary: false,
-  },
+const FEATURES = [
+  "One active request at a time — unlimited backlog",
+  "Full-stack application, frontend, and API engineering",
+  "Next.js, React, headless commerce & UI/UX execution",
+  "Average 48–72 hour turnaround per request",
+  "Feature development, bug fixes, and production maintenance",
+  "Deployments, CI/CD, and infrastructure support",
+  "Database design, migrations, and third-party integrations",
+  "Stripe, auth, CMS, analytics, and webhook integrations",
+  "Direct Slack communication — no managers, no meetings",
+  "Pause or cancel anytime — no long-term contract",
+  "Code in your repos — you own everything we ship",
+  "Async progress updates with clear handoff documentation",
 ] as const;
+
+const currentMonth = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  year: "numeric",
+}).format(new Date());
 
 export default function Pricing() {
   return (
@@ -70,70 +32,75 @@ export default function Pricing() {
           Pricing
         </p>
         <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
-          Transparent pricing, no surprises.
+          One tier. Built for founders who ship.
         </h2>
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          Fixed scopes with clear deliverables. Every tier includes direct
-          collaboration — no account managers.
+          A single product engineering retainer — clear scope, async-friendly
+          delivery, and direct collaboration every step of the way.
         </p>
       </RevealAnimation>
 
-      <StaggerContainer
-        staggerDelay={0.12}
-        className="mt-10 grid gap-5 lg:grid-cols-3 lg:gap-6"
-      >
-        {TIERS.map((tier) => (
-          <StaggerItem key={tier.title}>
-            <article
-              className={`relative flex flex-col border bg-background p-7 transition-colors ${
-                tier.popular
-                  ? "border-accent ring-1 ring-accent/30 shadow-sm"
-                  : "border-border/80 hover:border-border"
-              }`}
-            >
-              {tier.popular ? (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-accent-foreground">
-                  Popular
+      <RevealAnimation delay={0.1} className="mt-10 max-w-5xl mx-auto">
+        <article className="grid overflow-hidden border border-border/80 bg-foreground text-background lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+          <div className="flex flex-col justify-between border-b border-background/10 p-8 md:p-10 lg:border-b-0 lg:border-r">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.28em] text-background/55">
+                The Product Engineering Tier
+              </p>
+              <p className="mt-4 text-sm text-background/70 leading-relaxed max-w-sm">
+                One request at a time. Paused or cancelled anytime.
+              </p>
+              <p className="mt-10 font-serif text-5xl md:text-6xl tracking-tight">
+                $1,999
+                <span className="ml-2 font-sans text-lg md:text-xl text-background/60">
+                  / mo
                 </span>
-              ) : null}
-
-              <h3 className="font-serif text-xl leading-tight">{tier.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                {tier.description}
               </p>
-              <p className="mt-6 font-serif text-3xl">{tier.price}</p>
+            </div>
 
-              <p className="mt-6 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                Includes
-              </p>
-              <ul className="mt-3 flex-1 space-y-2.5 text-sm">
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex gap-3 leading-relaxed">
-                    <span
-                      className="text-accent shrink-0 mt-1.5 size-1.5 rounded-full bg-accent"
-                      aria-hidden
-                    />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
+            <div className="mt-10 lg:mt-16">
               <Link
-                href={tier.href}
+                href={headerCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-6 inline-flex items-center justify-center px-6 py-3 text-sm transition-colors ${
-                  tier.primary
-                    ? "bg-accent text-accent-foreground hover:bg-foreground hover:text-background"
-                    : "border border-border hover:border-accent hover:text-accent"
-                }`}
+                className="inline-flex w-full items-center justify-center border border-background/20 bg-background/10 px-6 py-3.5 text-sm text-background transition-colors hover:bg-background hover:text-foreground sm:w-auto"
               >
-                {tier.cta}
+                Secure a Slot
               </Link>
-            </article>
-          </StaggerItem>
-        ))}
-      </StaggerContainer>
+              <p className="mt-3 text-xs text-background/40">
+                Only 1 slot left for {currentMonth}
+              </p>
+              <p className="mt-6 text-xs leading-relaxed text-background/50">
+                Includes: engineering, design execution, deployment support,
+                integrations, and direct founder collaboration.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-8 md:p-10">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-background/45">
+              What&apos;s included
+            </p>
+            <ul className="mt-5 grid gap-3.5 sm:grid-cols-2">
+              {FEATURES.map((feature) => (
+                <li key={feature} className="flex gap-3 text-sm leading-relaxed">
+                  <Check
+                    className="mt-0.5 size-4 shrink-0 text-[var(--accent-light)]"
+                    aria-hidden
+                  />
+                  <span className="text-background/90">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 text-sm leading-relaxed text-background/60 border-t border-background/10 pt-6">
+              Works for solo founders and lean product teams looking for
+              agency-grade execution without the agency overhead. Submit
+              requests as your roadmap evolves — pause when you need to, resume
+              when you&apos;re ready.
+            </p>
+          </div>
+        </article>
+      </RevealAnimation>
     </SectionShell>
   );
 }

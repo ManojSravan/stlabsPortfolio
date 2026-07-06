@@ -22,7 +22,7 @@ export default function Blogs() {
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-10">
             All articles
           </p>
-          <div className="grid gap-8 md:gap-10 max-w-3xl mx-auto">
+          <div className="grid gap-8 md:gap-10">
             {blogPosts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}

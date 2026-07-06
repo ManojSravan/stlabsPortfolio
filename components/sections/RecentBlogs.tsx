@@ -16,7 +16,7 @@ export default function RecentBlogs() {
       />
       <StaggerContainer
         staggerDelay={0.1}
-        className="mt-10 grid gap-6 md:gap-8 max-w-3xl mx-auto"
+        className="mt-10 grid gap-6 md:gap-8"
       >
         {recentBlogs.map((post) => (
           <StaggerItem key={post.slug}>

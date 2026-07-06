@@ -12,7 +12,7 @@ export default function BlogCard({ post }: BlogCardProps) {
     <article className="group">
       <Link
         href={`/blogs/${post.slug}`}
-        className="flex gap-5 sm:gap-6 border-l-[3px] border-accent/30 pl-5 sm:pl-6 py-1 transition-colors hover:border-accent"
+        className="flex gap-5 sm:gap-8 border border-border/60 bg-background p-5 sm:p-6 md:p-7 transition-colors hover:border-accent/50"
       >
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
@@ -23,11 +23,11 @@ export default function BlogCard({ post }: BlogCardProps) {
             <span>{post.readTime}</span>
           </div>
 
-          <h3 className="font-serif mt-2.5 text-lg md:text-xl leading-snug text-balance group-hover:text-accent transition-colors">
+          <h3 className="font-serif mt-2.5 text-lg md:text-2xl leading-snug text-balance group-hover:text-accent transition-colors">
             {post.title}
           </h3>
 
-          <p className="mt-2 text-sm text-muted-foreground leading-relaxed line-clamp-2">
+          <p className="mt-2 text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-2 md:line-clamp-3 max-w-4xl">
             {post.description}
           </p>
 
@@ -40,13 +40,13 @@ export default function BlogCard({ post }: BlogCardProps) {
           </span>
         </div>
 
-        <div className="relative hidden sm:block h-20 w-20 shrink-0 overflow-hidden border border-border/60 bg-secondary/40">
+        <div className="relative hidden sm:block h-24 w-32 md:h-28 md:w-40 shrink-0 overflow-hidden border border-border/60 bg-secondary/40">
           <Image
             src={post.heroImage}
             alt=""
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="80px"
+            sizes="(max-width: 768px) 160px, 200px"
           />
         </div>
       </Link>
