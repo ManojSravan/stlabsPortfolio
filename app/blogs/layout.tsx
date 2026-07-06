@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Blogs",
 
   description:
-    "Notes on product, engineering, and building independently — from MVP scoping to shipping production software.",
+    "Notes on product, engineering, and building independently, from MVP scoping to shipping production software.",
 
   keywords: [
     "Product Engineering Blog",

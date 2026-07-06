@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 
 interface RevealAnimationProps {
   children: ReactNode;
@@ -18,13 +18,18 @@ export function RevealAnimation({
   direction = "up",
   className = "",
 }: RevealAnimationProps) {
-  // Define initial positions based on direction
+  const prefersReducedMotion = useReducedMotion();
+
   const initialPositions = {
     up: { y: 20, opacity: 0 },
     down: { y: -20, opacity: 0 },
     left: { x: 20, opacity: 0 },
     right: { x: -20, opacity: 0 },
   };
+
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div

@@ -14,7 +14,7 @@ export const site = {
   established: "2020",
   whatsappNumber,
   whatsappUrl: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    "Hi — I'd like to discuss a project.",
+    "Hi, I'd like to discuss a project.",
   )}`,
   social: {
     linkedin: "https://linkedin.com/in/manojsravan/",
@@ -29,7 +29,7 @@ export const site = {
     image: "/founderimage.jpeg",
     imageAlt: "Manoj Sravan, founder of Sravan Tech Labs",
     headline: "A small studio for founders who need to ship.",
-    note: "I'm Manoj. I started Sravan Tech Labs after seeing too many projects stall between design and production. We work directly with founders — clear scope, careful builds, and software that holds up when real users arrive.",
+    note: "I'm Manoj. I started Sravan Tech Labs after seeing too many projects stall between design and production. I work directly with founders: clear scope, careful builds, and software that holds up when real users arrive.",
     ctaLabel: "Connect on LinkedIn",
     ctaHref: "https://www.linkedin.com/in/manojsravan/",
   },
@@ -48,7 +48,7 @@ export const mainNav: readonly NavEntry[] = [
 export const faqs = [
   {
     q: "How do we work together?",
-    a: "Direct collaboration — no account managers or handoffs. We start with a call to understand your product, scope the work, and move into design and build with regular check-ins.",
+    a: "Direct collaboration, no account managers or handoffs. We start with a call to understand your product, scope the work, and move into design and build with regular check-ins.",
   },
   {
     q: "What types of projects do you take on?",
@@ -56,11 +56,11 @@ export const faqs = [
   },
   {
     q: "What's your typical timeline?",
-    a: "MVPs often ship in 4–8 weeks depending on scope. Larger products are phased — we define milestones upfront so you know what ships when.",
+    a: "MVPs often ship in 4–8 weeks depending on scope. Larger products are phased: we define milestones upfront so you know what ships when.",
   },
   {
     q: "Do you work with teams outside India?",
-    a: "Yes. I collaborate with founders worldwide — async-friendly, clear communication, and overlap for calls when time zones allow.",
+    a: "Yes. We collaborate with founders worldwide: async-friendly communication, clear updates, and overlap for calls when time zones allow.",
   },
 ] as const;
 

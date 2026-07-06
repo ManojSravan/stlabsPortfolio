@@ -33,7 +33,7 @@ export default function Founder() {
             className="font-serif text-xl md:text-2xl italic text-foreground/85"
             aria-label="Signature"
           >
-            — {founder.signature}
+            {founder.signature}
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
             <span className="text-foreground font-medium">{founder.name}</span>

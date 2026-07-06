@@ -12,7 +12,7 @@ export default function Testimonials() {
       <SectionHeader
         label="Testimonials"
         title="Words from collaborators."
-        description="Direct feedback from founders and teams I've worked with."
+        description="Direct feedback from founders and teams we&apos;ve worked with."
       />
       <StaggerContainer
         staggerDelay={0.15}

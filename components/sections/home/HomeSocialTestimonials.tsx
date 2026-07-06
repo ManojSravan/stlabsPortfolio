@@ -10,7 +10,7 @@ export default function HomeSocialTestimonials() {
           Testimonials
         </p>
         <h2 className="font-serif text-2xl md:text-3xl mt-3 text-balance">
-          What clients say across platforms.
+          What founders say after we ship.
         </h2>
       </div>
 

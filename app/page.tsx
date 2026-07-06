@@ -6,6 +6,7 @@ import Founder from "@/components/sections/Founder";
 import HomeFAQs from "@/components/sections/home/HomeFAQs";
 import HomeFinalCTA from "@/components/sections/home/HomeFinalCTA";
 import HomeHero from "@/components/sections/home/HomeHero";
+import HomeProductCarousel from "@/components/sections/home/HomeProductCarousel";
 import HomeSocialProof from "@/components/sections/home/HomeSocialProof";
 import HomeSocialTestimonials from "@/components/sections/home/HomeSocialTestimonials";
 import HomeWhatWeDo from "@/components/sections/home/HomeWhatWeDo";
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Manoj Sravan builds and ships products for founders — MVPs, SaaS platforms, ecommerce, and production-ready web applications.",
+    "Sravan Tech Labs designs, builds, and ships products for founders: MVPs, SaaS platforms, ecommerce, and production-ready web applications.",
 
   keywords: [
     "Sravan Tech Labs",
@@ -55,10 +56,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Sravan Tech Labs — Product Engineering Studio",
+    title: "Sravan Tech Labs | Product Engineering Studio",
 
     description:
-      "A product engineering studio that designs, builds, and ships software for founders — from MVP to production.",
+      "A product engineering studio that designs, builds, and ships software for founders, from MVP to production.",
 
     url: "https://sravantechlabs.com",
 
@@ -81,7 +82,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Sravan Tech Labs — Product Engineering Studio",
+    title: "Sravan Tech Labs | Product Engineering Studio",
 
     description:
       "Product engineering studio shipping MVPs, SaaS platforms, and web products for founders.",
@@ -150,7 +151,7 @@ export default function Index() {
       "https://github.com/sravantechlabs",
     ],
     description:
-      "Founder of Sravan Tech Labs, a product engineering studio helping founders design, build, and ship software.",
+      "Founder of Sravan Tech Labs, a product engineering studio helping founders bring software from idea to production.",
   };
 
   const websiteSchema = {
@@ -177,15 +178,16 @@ export default function Index() {
         suppressHydrationWarning
       />
       <HomeHero />
+      <HomeProductCarousel />
       <HomeSocialProof />
-      <HomeWhatWeDo />
-      <Founder />
       <RecentWork />
-      <RecentBlogs />
+      <Founder />
       <Pricing />
-      <HomeFAQs />
+      <RecentBlogs />
       <HomeSocialTestimonials />
       <HomeFinalCTA />
+      <HomeWhatWeDo />
+      <HomeFAQs />
     </>
   );
 }

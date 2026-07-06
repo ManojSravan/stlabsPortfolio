@@ -20,9 +20,8 @@ export default function HomeHero() {
             </RevealAnimation>
             <RevealAnimation delay={0.1}>
               <p className="mt-6 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed">
-                I design, build, and deploy production-ready MVPs and SaaS
-                platforms — one builder, direct collaboration, from first sketch
-                to launch.
+                We design, build, and deploy production-ready MVPs and SaaS
+                platforms. Direct collaboration from first sketch to launch.
               </p>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>

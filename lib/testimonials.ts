@@ -23,7 +23,7 @@ export const socialTestimonials: SocialTestimonial[] = [
     id: "linkedin-1",
     platform: "linkedin",
     quote:
-      "Brought strong technical ownership to the team — clarity, reliability, and solid execution across every development initiative.",
+      "Brought strong technical ownership to the team: clarity, reliability, and solid execution across every development initiative.",
     name: "Ranjith",
     role: "Sr Engineer, Communn",
     rating: 5,

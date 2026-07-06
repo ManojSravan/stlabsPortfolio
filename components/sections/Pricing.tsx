@@ -4,25 +4,175 @@ import SectionShell from "@/components/layout/SectionShell";
 import { RevealAnimation } from "@/components/animations";
 import { headerCta } from "@/lib/site";
 
-const FEATURES = [
-  "One active request at a time — unlimited backlog",
-  "Full-stack application, frontend, and API engineering",
-  "Next.js, React, headless commerce & UI/UX execution",
-  "Average 48–72 hour turnaround per request",
-  "Feature development, bug fixes, and production maintenance",
-  "Deployments, CI/CD, and infrastructure support",
-  "Database design, migrations, and third-party integrations",
-  "Stripe, auth, CMS, analytics, and webhook integrations",
-  "Direct Slack communication — no managers, no meetings",
-  "Pause or cancel anytime — no long-term contract",
-  "Code in your repos — you own everything we ship",
-  "Async progress updates with clear handoff documentation",
+const tiers = [
+  {
+    id: "build",
+    label: "Tier 1",
+    name: "Build",
+    subtitle: "Product Development",
+    price: "$2,500–3,500",
+    priceNote: "Starting at",
+    period: null,
+    description:
+      "For founders validating a new product or rebuilding an existing one.",
+    features: [
+      "Product strategy session",
+      "UI/UX implementation",
+      "Full-stack development",
+      "Authentication & payments",
+      "CMS & third-party integrations",
+      "Deployment",
+      "4–8 week engagement",
+    ],
+    cta: "Build my product",
+    variant: "light" as const,
+  },
+  {
+    id: "grow",
+    label: "Tier 2",
+    name: "Grow",
+    subtitle: "Product Engineering Partner",
+    price: "$1,999",
+    priceNote: null,
+    period: "/ month",
+    description:
+      "For teams that already have a product and need continuous execution.",
+    features: [
+      "Unlimited engineering requests",
+      "One active request at a time",
+      "Feature development",
+      "Bug fixes",
+      "Infrastructure & deployments",
+      "Technical advisory",
+      "Direct founder collaboration",
+      "Pause anytime",
+    ],
+    cta: "Become a partner",
+    variant: "dark" as const,
+  },
 ] as const;
 
-const currentMonth = new Intl.DateTimeFormat("en-US", {
-  month: "long",
-  year: "numeric",
-}).format(new Date());
+function PricingCard({
+  tier,
+}: {
+  tier: (typeof tiers)[number];
+}) {
+  const isLight = tier.variant === "light";
+
+  return (
+    <article
+      className={
+        isLight
+          ? "flex h-full flex-col border border-border/80 bg-background text-foreground"
+          : "flex h-full flex-col border border-foreground/15 bg-foreground text-background"
+      }
+    >
+      <div className="flex flex-1 flex-col p-8 md:p-10">
+        <div>
+          <p
+            className={
+              isLight
+                ? "text-[10px] uppercase tracking-[0.28em] text-muted-foreground"
+                : "text-[10px] uppercase tracking-[0.28em] text-background/55"
+            }
+          >
+            {tier.label} · {tier.name}
+          </p>
+          <h3 className="mt-3 font-serif text-2xl md:text-3xl tracking-tight">
+            {tier.subtitle}
+          </h3>
+          <p
+            className={
+              isLight
+                ? "mt-4 text-sm leading-relaxed text-muted-foreground"
+                : "mt-4 text-sm leading-relaxed text-background/70"
+            }
+          >
+            {tier.description}
+          </p>
+
+          <div className="mt-8">
+            {tier.priceNote ? (
+              <p
+                className={
+                  isLight
+                    ? "text-xs uppercase tracking-[0.2em] text-muted-foreground"
+                    : "text-xs uppercase tracking-[0.2em] text-background/50"
+                }
+              >
+                {tier.priceNote}
+              </p>
+            ) : null}
+            <p className="mt-1 font-serif text-4xl md:text-5xl tracking-tight">
+              {tier.price}
+              {tier.period ? (
+                <span
+                  className={
+                    isLight
+                      ? "ml-2 font-sans text-lg text-muted-foreground"
+                      : "ml-2 font-sans text-lg text-background/60"
+                  }
+                >
+                  {tier.period}
+                </span>
+              ) : null}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 flex-1">
+          <p
+            className={
+              isLight
+                ? "text-[10px] uppercase tracking-[0.25em] text-muted-foreground"
+                : "text-[10px] uppercase tracking-[0.25em] text-background/45"
+            }
+          >
+            Includes
+          </p>
+          <ul className="mt-5 grid gap-3">
+            {tier.features.map((feature) => (
+              <li key={feature} className="flex gap-3 text-sm leading-relaxed">
+                <Check
+                  className={
+                    isLight
+                      ? "mt-0.5 size-4 shrink-0 text-accent"
+                      : "mt-0.5 size-4 shrink-0 text-[var(--accent-light)]"
+                  }
+                  aria-hidden
+                />
+                <span className={isLight ? "text-foreground/90" : "text-background/90"}>
+                  {feature}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div
+          className={
+            isLight
+              ? "mt-10 border-t border-border/60 pt-8"
+              : "mt-10 border-t border-background/10 pt-8"
+          }
+        >
+          <Link
+            href={headerCta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={
+              isLight
+                ? "inline-flex w-full items-center justify-center bg-foreground px-6 py-3.5 text-sm text-background transition-colors hover:bg-accent sm:w-auto"
+                : "inline-flex w-full items-center justify-center border border-background/20 bg-background/10 px-6 py-3.5 text-sm text-background transition-colors hover:bg-background hover:text-foreground sm:w-auto"
+            }
+          >
+            {tier.cta}
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function Pricing() {
   return (
@@ -32,74 +182,20 @@ export default function Pricing() {
           Pricing
         </p>
         <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
-          One tier. Built for founders who ship.
+          Two ways to work with us.
         </h2>
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          A single product engineering retainer — clear scope, async-friendly
-          delivery, and direct collaboration every step of the way.
+          A two-tier model that matches how founders buy: ship a product first,
+          then keep momentum with ongoing engineering.
         </p>
       </RevealAnimation>
 
-      <RevealAnimation delay={0.1} className="mt-10 max-w-5xl mx-auto">
-        <article className="grid overflow-hidden border border-border/80 bg-foreground text-background lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
-          <div className="flex flex-col justify-between border-b border-background/10 p-8 md:p-10 lg:border-b-0 lg:border-r">
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.28em] text-background/55">
-                The Product Engineering Tier
-              </p>
-              <p className="mt-4 text-sm text-background/70 leading-relaxed max-w-sm">
-                One request at a time. Paused or cancelled anytime.
-              </p>
-              <p className="mt-10 font-serif text-5xl md:text-6xl tracking-tight">
-                $1,999
-                <span className="ml-2 font-sans text-lg md:text-xl text-background/60">
-                  / mo
-                </span>
-              </p>
-            </div>
-
-            <div className="mt-10 lg:mt-16">
-              <Link
-                href={headerCta.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center border border-background/20 bg-background/10 px-6 py-3.5 text-sm text-background transition-colors hover:bg-background hover:text-foreground sm:w-auto"
-              >
-                Secure a Slot
-              </Link>
-              <p className="mt-3 text-xs text-background/40">
-                Only 1 slot left for {currentMonth}
-              </p>
-              <p className="mt-6 text-xs leading-relaxed text-background/50">
-                Includes: engineering, design execution, deployment support,
-                integrations, and direct founder collaboration.
-              </p>
-            </div>
-          </div>
-
-          <div className="p-8 md:p-10">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-background/45">
-              What&apos;s included
-            </p>
-            <ul className="mt-5 grid gap-3.5 sm:grid-cols-2">
-              {FEATURES.map((feature) => (
-                <li key={feature} className="flex gap-3 text-sm leading-relaxed">
-                  <Check
-                    className="mt-0.5 size-4 shrink-0 text-[var(--accent-light)]"
-                    aria-hidden
-                  />
-                  <span className="text-background/90">{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-8 text-sm leading-relaxed text-background/60 border-t border-background/10 pt-6">
-              Works for solo founders and lean product teams looking for
-              agency-grade execution without the agency overhead. Submit
-              requests as your roadmap evolves — pause when you need to, resume
-              when you&apos;re ready.
-            </p>
-          </div>
-        </article>
+      <RevealAnimation delay={0.1} className="mt-10">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+          {tiers.map((tier) => (
+            <PricingCard key={tier.id} tier={tier} />
+          ))}
+        </div>
       </RevealAnimation>
     </SectionShell>
   );

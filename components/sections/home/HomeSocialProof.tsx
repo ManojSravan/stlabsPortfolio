@@ -6,14 +6,14 @@ import { testimonials } from "@/lib/work";
 
 function ClientLogo({ name, logo }: { name: string; logo: string }) {
   return (
-    <div className="flex h-24 w-52 shrink-0 items-center justify-center px-5 opacity-90 transition-opacity hover:opacity-100">
-      <div className="relative h-16 w-full">
+    <div className="flex h-20 flex-1 min-w-[7rem] max-w-[11rem] items-center justify-center px-4 opacity-80 transition-opacity hover:opacity-100">
+      <div className="relative h-12 w-full">
         <Image
           src={logo}
           alt={`${name} logo`}
           fill
           className="object-contain"
-          sizes="208px"
+          sizes="176px"
         />
       </div>
     </div>
@@ -22,10 +22,9 @@ function ClientLogo({ name, logo }: { name: string; logo: string }) {
 
 export default function HomeSocialProof() {
   const featured = testimonials[0];
-  const marqueeClients = [...clients, ...clients];
 
   return (
-    <SectionShell id="trust" className="scroll-mt-28" border={false}>
+    <SectionShell id="trust" className="scroll-mt-28" variant="muted">
       <div className="mx-auto max-w-3xl text-center">
         <figure className="relative">
           <span
@@ -45,18 +44,13 @@ export default function HomeSocialProof() {
         </figure>
       </div>
 
-      <div className="mt-12 relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-background/80 to-transparent"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-background/80 to-transparent"
-        />
-        <div className="flex w-max animate-marquee gap-12 hover:[animation-play-state:paused]">
-          {marqueeClients.map((client, index) => (
-            <ClientLogo key={`${client.name}-${index}`} {...client} />
+      <div className="mt-12 border-t border-border/60 pt-10">
+        <p className="text-center text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+          Founders we&apos;ve shipped with
+        </p>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-6">
+          {clients.map((client) => (
+            <ClientLogo key={client.name} {...client} />
           ))}
         </div>
       </div>

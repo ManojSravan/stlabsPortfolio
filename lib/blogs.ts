@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "On leaving the agency model behind",
     category: "Practice",
     description:
-      "After years of shipping inside teams and agencies, I chose a different path — one builder, direct collaboration, full ownership from idea to production.",
+      "After years of shipping inside teams and agencies, I chose a different path: one builder, direct collaboration, full ownership from idea to production.",
     excerpt:
       "The agency model optimizes for billable hours. Independent building optimizes for shipped outcomes. Here's why that shift matters.",
     author: "Manoj Sravan",
@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
     body: [
       {
         type: "paragraph",
-        text: "Most product work gets filtered through layers — account managers, project leads, junior developers. By the time code ships, the original intent is diluted and the founder is three degrees removed from the person actually building.",
+        text: "Most product work gets filtered through layers: account managers, project leads, junior developers. By the time code ships, the original intent is diluted and the founder is three degrees removed from the person actually building.",
       },
       {
         type: "heading",
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "MVPs fail when they try to do too much. Here's the scoping process I use with founders to ship something real in 4–8 weeks.",
     excerpt:
-      "The goal isn't to build less — it's to build the right thing first. A repeatable scoping process that keeps MVPs focused and shippable.",
+      "The goal isn't to build less. It's to build the right thing first. A repeatable scoping process that keeps MVPs focused and shippable.",
     author: "Manoj Sravan",
     publishedAt: "2026-01-28",
     readTime: "5 min read",
@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
     body: [
       {
         type: "paragraph",
-        text: "Every founder I talk to has a vision for the full product. That's good — it means they care. But the MVP isn't the vision. It's the smallest version that lets real users validate the core assumption.",
+        text: "Every founder I talk to has a vision for the full product. That's good: it means they care. But the MVP isn't the vision. It's the smallest version that lets real users validate the core assumption.",
       },
       {
         type: "heading",
@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Before features, before tech stack, before timelines — what's the single assumption this product needs to prove? If you can't answer that in one sentence, you're not ready to scope.",
+        text: "Before features, before tech stack, before timelines: what's the single assumption this product needs to prove? If you can't answer that in one sentence, you're not ready to scope.",
       },
       {
         type: "heading",
@@ -102,7 +102,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "List everything the product could do. Then mark each item as must-have for launch, nice-to-have, or later. Be ruthless. Admin dashboards, analytics, integrations — most of it can wait.",
+        text: "List everything the product could do. Then mark each item as must-have for launch, nice-to-have, or later. Be ruthless. Admin dashboards, analytics, integrations: most of it can wait.",
       },
       {
         type: "list",
@@ -118,7 +118,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "A scoped MVP has a clear definition of done — not 'when it feels ready' but specific user flows that work end to end. We write this down together before writing code.",
+        text: "A scoped MVP has a clear definition of done: not 'when it feels ready' but specific user flows that work end to end. We write this down together before writing code.",
       },
     ],
   },
@@ -140,7 +140,7 @@ export const blogPosts: BlogPost[] = [
     body: [
       {
         type: "paragraph",
-        text: "There's a myth that you have to choose between shipping fast and building well. In practice, the projects that move fastest are the ones with clear architecture from day one — not the ones held together with duct tape.",
+        text: "There's a myth that you have to choose between shipping fast and building well. In practice, the projects that move fastest are the ones with clear architecture from day one, not the ones held together with duct tape.",
       },
       {
         type: "heading",

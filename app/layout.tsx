@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Manoj Sravan builds and ships products for founders — MVPs, SaaS platforms, ecommerce, and production-ready web applications.",
+    "Sravan Tech Labs designs, builds, and ships products for founders: MVPs, SaaS platforms, ecommerce, and production-ready web applications.",
 
   keywords: [
     "Sravan Tech Labs",
@@ -70,10 +70,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Sravan Tech Labs — Product Engineering Studio",
+    title: "Sravan Tech Labs | Product Engineering Studio",
 
     description:
-      "A product engineering studio that designs, builds, and ships software for founders — from MVP to production.",
+      "A product engineering studio that designs, builds, and ships software for founders, from MVP to production.",
 
     url: "https://sravantechlabs.com",
 
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Sravan Tech Labs — Product Engineering Studio",
+    title: "Sravan Tech Labs | Product Engineering Studio",
 
     description:
       "Product engineering studio shipping MVPs, SaaS platforms, and web products for founders.",

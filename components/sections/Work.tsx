@@ -11,7 +11,7 @@ export default function Work() {
         label="Case studies"
         title={
           <>
-            Products I&apos;ve <span className="text-accent">shipped.</span>
+            Products we&apos;ve <span className="text-accent">shipped.</span>
           </>
         }
         description="Selected work across ecommerce, SaaS, creator tools, and learning platforms."

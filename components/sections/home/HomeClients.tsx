@@ -26,7 +26,7 @@ export default function HomeClients() {
     <SectionShell id="clients" className="scroll-mt-28" variant="muted">
       <SectionHeader
         label="Clients"
-        title="Teams I've shipped with."
+        title="Teams we&apos;ve shipped with."
         description="Founders and product teams across ecommerce, SaaS, media, and creator platforms."
       />
       <div className="mt-10 relative overflow-hidden">

@@ -10,7 +10,7 @@ export default function HomeFinalCTA() {
         </h2>
         <p className="mt-4 text-sm md:text-base text-background/70 max-w-lg mx-auto leading-relaxed">
           Book a free intro call. We&apos;ll scope your idea, talk timelines,
-          and figure out if we&apos;re a good fit — no pressure.
+          and see if we&apos;re a good fit, with no pressure.
         </p>
         <Link
           href={headerCta.href}

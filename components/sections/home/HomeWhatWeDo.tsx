@@ -16,7 +16,7 @@ const features: {
     icon: Layers,
     title: "Product design",
     description:
-      "User flows and interfaces shaped before code — so you launch with clarity, not guesswork.",
+      "User flows and interfaces shaped before code, so you launch with clarity, not guesswork.",
   },
   {
     icon: Code2,
@@ -46,11 +46,11 @@ export default function HomeWhatWeDo() {
           What you get
         </p>
         <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
-          One builder across the full stack.
+          One team across the full stack.
         </h2>
         <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed">
-          Not an agency. Direct ownership of design, engineering, and delivery —
-          so your product moves fast without losing quality.
+          Design, engineering, and delivery in one place. No handoffs, no
+          account managers. Just direct collaboration on your product.
         </p>
       </div>
 

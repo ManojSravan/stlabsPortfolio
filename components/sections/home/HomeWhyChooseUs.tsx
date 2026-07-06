@@ -3,7 +3,7 @@ import SectionShell from "@/components/layout/SectionShell";
 const whyChooseUs = {
   title: "Why work with me?",
   points: [
-    "Direct collaboration — no account managers or handoffs",
+    "Direct collaboration, no account managers or handoffs",
     "Hands-on building from scope through production",
     "Practical architecture chosen for long-term stability",
     "Clear communication and honest trade-offs",

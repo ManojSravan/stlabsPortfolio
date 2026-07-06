@@ -11,7 +11,7 @@ export default function RecentWork() {
       <SectionHeader
         label="Case studies"
         title="Selected work."
-        description="Recent products — designed, built, and shipped end to end."
+        description="Products we designed, built, and shipped end to end, with outcomes that matter."
         action={{ href: "/case-studies", label: "View all" }}
       />
       <StaggerContainer
