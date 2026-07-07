@@ -45,12 +45,7 @@ export default function SiteHeader() {
               {headerCta.label}
               <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
             </Link>
-            <a
-              href={`mailto:${site.email}`}
-              className="hidden sm:inline-flex text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-accent transition-colors px-2"
-            >
-              Contact
-            </a>
+          
             <MobileNav />
           </div>
         </div>

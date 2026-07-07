@@ -3,10 +3,10 @@ const whatsappNumber =
 
 export const site = {
   name: "Sravan Tech Labs",
-  studioLabel: "Product Engineering Studio",
-  tagline: "Build · Ship · Iterate",
+  studioLabel: "On-Demand Product Studio",
+  tagline: "Subscribe · Discuss · Ship",
   description:
-    "Product engineering studio partnering with early-stage founders to design, build, and continuously improve SaaS products—from MVP to scale.",
+    "An on-demand product studio for founders who want to build without the agency runaround. Subscribe, tell us what to ship, and we build it.",
   email: "hello@sravantechlabs.com",
   phone: "+91 63000 18219",
   phoneHref: "tel:+916300018219",
@@ -28,8 +28,8 @@ export const site = {
     signature: "Manoj Sravan",
     image: "/founderimage.jpeg",
     imageAlt: "Manoj Sravan, founder of Sravan Tech Labs",
-    headline: "A small studio for founders who need to ship.",
-    note: "I'm Manoj. I started Sravan Tech Labs after seeing too many projects stall between design and production. I work directly with founders: clear scope, careful builds, and software that holds up when real users arrive.",
+    headline: "A product studio that works like a subscription.",
+    note: "I'm Manoj. I built Sravan Tech Labs for founders who are tired of proposals, scope creep, and handoffs. Subscribe once, tell me what to build, and I'll design, engineer, and ship it to production directly with you, with no layers in between.",
     ctaLabel: "Connect on LinkedIn",
     ctaHref: "https://www.linkedin.com/in/manojsravan/",
   },
@@ -38,34 +38,35 @@ export const site = {
 export type NavEntry = { type: "link"; href: string; label: string };
 
 export const mainNav: readonly NavEntry[] = [
-  { type: "link", label: "Services", href: "/#services" },
-  { type: "link", label: "About", href: "/#about" },
+  { type: "link", label: "Home", href: "/" },
+  { type: "link", label: "How it works", href: "/#services" },
   { type: "link", label: "Pricing", href: "/#pricing" },
   { type: "link", label: "Case Studies", href: "/case-studies" },
   { type: "link", label: "Blogs", href: "/blogs" },
+  { type: "link", label: "Contact", href: "mailto:hello@sravantechlabs.com" },
 ] as const;
 
 export const faqs = [
   {
-    q: "How do we work together?",
-    a: "Direct collaboration, no account managers or handoffs. We start with a call to understand your product, scope the work, and move into design and build with regular check-ins.",
+    q: "How does the subscription work?",
+    a: "Pick a monthly plan, add product requests to your queue, and we work through them one at a time. Each request goes from discussion to deployed code, with no separate scoping fees or change orders. Move up a tier as your product needs grow.",
   },
   {
-    q: "What types of projects do you take on?",
-    a: "MVPs, SaaS platforms, ecommerce builds, and product rebuilds. If it needs to ship to production and hold up under real users, it's a good fit.",
+    q: "What can I request?",
+    a: "MVPs, new features, bug fixes, integrations, landing pages, dashboards, ecommerce builds. Anything that needs to ship to production. If it's software, it's on the table.",
   },
   {
-    q: "What's your typical timeline?",
-    a: "MVPs often ship in 4–8 weeks depending on scope. Larger products are phased: we define milestones upfront so you know what ships when.",
+    q: "How fast do requests ship?",
+    a: "Depends on scope. Small features often ship within days. Larger builds like MVPs typically take a few weeks. We align on timeline upfront for each request before work begins.",
   },
   {
-    q: "Do you work with teams outside India?",
-    a: "Yes. We collaborate with founders worldwide: async-friendly communication, clear updates, and overlap for calls when time zones allow.",
+    q: "Can I pause or cancel?",
+    a: "Yes. Pause when you don't need active development, or cancel before the next billing cycle. No long-term contracts.",
   },
 ] as const;
 
 export const headerCta = {
-  label: "Book a Discovery Call",
+  label: "Subscribe",
   href: "https://cal.com/manoj-sravan-annivg/starterlaunch",
 } as const;
 
@@ -77,7 +78,7 @@ export const heroStats = [
 
 /** Flat links for footer and simple menus */
 export const navLinks = [
-  { href: "/#services", label: "Services" },
+  { href: "/#services", label: "How it works" },
   { href: "/#about", label: "About" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/case-studies", label: "Case Studies" },
@@ -98,4 +99,8 @@ export const clients = [
     logo: "/clients/boombooth.png",
   },
   { name: "ChordAI", logo: "/clients/chordai.jpeg" },
+  {
+    name: "Ojas3D Creatives",
+    logo: "/clients/ojaslogo.png",
+  },
 ] as const;

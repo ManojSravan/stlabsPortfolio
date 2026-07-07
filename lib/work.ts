@@ -1,3 +1,5 @@
+import { clientQuotes } from "@/lib/client-quotes";
+
 export type ContentBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string }
@@ -226,7 +228,7 @@ export const workProjects: WorkProject[] = [
     engagement: "10-month embedded product engineering",
     outcome:
       "Delivered end-to-end influencer infrastructure with campaign tracking, affiliate attribution, and automated Razorpay payouts across four distinct user roles.",
-    heroImage: "/work/Communn_banner.png",
+    heroImage: "/case-study-media/communn-banner.png",
     readTime: "6 min read",
     featured: true,
     body: [
@@ -296,7 +298,8 @@ export const workProjects: WorkProject[] = [
       },
       {
         type: "quote",
-        text: "Manoj was an integral part of our engineering team. He took active ownership of production deployments and was a consistent and constructive presence in our code review process, offering precise feedback that improved the quality and maintainability of our codebase - Manjula R, Chief Business Officer, Communn.io"
+        text: clientQuotes.communn.quote,
+        cite: clientQuotes.communn.cite,
       },
     ],
   },
@@ -315,7 +318,7 @@ export const workProjects: WorkProject[] = [
     engagement: "9-month embedded partnership",
     outcome:
       "Both brands launched with scalable digital foundations. Illumora strengthened its online credibility and client acquisition pipeline. BoomBooth Studios went live with a platform built for long-term creator growth.",
-    heroImage: "/work/image.png",
+    heroImage: "/case-study-media/illumora-boombooth-banner.png",
     readTime: "4 min read",
     featured: true,
     body: [
@@ -371,9 +374,8 @@ export const workProjects: WorkProject[] = [
       },
       {
         type: "quote",
-        text:
-          "They worked closely with us not just as a service provider, but as a partner who understood our vision and translated it into effective digital solutions. Sameeksha, Founder, Illumora.co",
-
+        text: clientQuotes.illumora.quote,
+        cite: clientQuotes.illumora.cite,
       },
     ],
   },
@@ -488,8 +490,8 @@ export const workProjects: WorkProject[] = [
       },
       {
         type: "quote",
-        text:
-          "We partnered with Sravan Tech Labs to build and launch the e-commerce store for Ojas3D Creatives, and we are very happy and satisfied with the results. Their attention to detail, technical expertise, and excellent post-launch support made the entire transition effortless. A truly reliable company that delivers on its promises! - Founder, Ojas3D Creatives.",
+        text: clientQuotes.ojas3d.quote,
+        cite: clientQuotes.ojas3d.cite,
       },
     ],
   }
@@ -497,43 +499,39 @@ export const workProjects: WorkProject[] = [
 
 export const caseStudies = workProjects.filter((p) => p.featured);
 
-export const recentWork = workProjects.slice(0, 4);
+export const recentWork = workProjects.slice(0, 2);
 
 export const testimonials: Testimonial[] = [
   {
     id: "1",
-    quote:
-      "Sravan Tech Labs brought strong technical ownership to the team and consistently contributed with clarity, reliability, and solid execution across development initiatives.",
-    name: "Team Communn",
-    role: "Product & Engineering",
-    company: "Communn.io",
+    quote: clientQuotes.communn.quote,
+    name: clientQuotes.communn.name,
+    role: clientQuotes.communn.role,
+    company: clientQuotes.communn.company,
     rating: 5,
   },
   {
     id: "2",
-    quote:
-      "We partnered with Sravan Tech Labs to build and launch the e-commerce store for Ojas3D Creatives, and we are very happy and satisfied with the results. Their attention to detail, technical expertise, and excellent post-launch support made the entire transition effortless. A truly reliable company that delivers on its promises!",
-    name: "Team Ojas3D Creatives",
-    role: "Ecommerce Launch",
-    company: "Ojas3D Creatives",
+    quote: clientQuotes.ojas3d.quote,
+    name: clientQuotes.ojas3d.name,
+    role: clientQuotes.ojas3d.role,
+    company: clientQuotes.ojas3d.company,
     rating: 5,
   },
   {
     id: "3",
-    quote:
-      "The collaboration felt structured and dependable throughout the engagement. From implementation quality to technical support, the work helped strengthen our digital presence across both brands.",
-    name: "Team Illumora",
-    role: "Operations & Brand",
-    company: "Illumora & BoomBooth Studios",
+    quote: clientQuotes.illumora.quote,
+    name: clientQuotes.illumora.name,
+    role: clientQuotes.illumora.role,
+    company: clientQuotes.illumora.company,
     rating: 5,
   },
   {
     id: "4",
-    quote:
-      "Working with Sravan Tech Labs on my book launch landing page was a great experience. They delivered a clean, elegant website that perfectly matched my vision and helped present my work professionally. Highly recommended for anyone looking for reliable web development support.",
-    name: "Vamsi Kalle",
-    role: "Author",
-    company: "Independent Author",
+    quote: clientQuotes.vamsi.quote,
+    name: clientQuotes.vamsi.name,
+    role: clientQuotes.vamsi.role,
+    company: clientQuotes.vamsi.company,
     rating: 5,
   },
 ];

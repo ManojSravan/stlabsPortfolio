@@ -1,3 +1,5 @@
+import { clientQuotes } from "@/lib/client-quotes";
+
 export type SocialPlatform = "google" | "linkedin";
 
 export type SocialTestimonial = {
@@ -13,37 +15,33 @@ export const socialTestimonials: SocialTestimonial[] = [
   {
     id: "google-1",
     platform: "google",
-    quote:
-      "We partnered with Sravan Tech Labs to build our e-commerce store and are very happy with the results. Excellent post-launch support and a truly reliable team.",
-    name: "Vikram",
-    role: "Founder, Ojas3D Creatives",
+    quote: clientQuotes.ojas3d.quote,
+    name: clientQuotes.ojas3d.name,
+    role: `${clientQuotes.ojas3d.role}, ${clientQuotes.ojas3d.company}`,
     rating: 5,
   },
   {
     id: "linkedin-1",
     platform: "linkedin",
-    quote:
-      "Brought strong technical ownership to the team: clarity, reliability, and solid execution across every development initiative.",
-    name: "Ranjith",
-    role: "Sr Engineer, Communn",
+    quote: clientQuotes.communn.quote,
+    name: clientQuotes.communn.name,
+    role: `${clientQuotes.communn.role}, ${clientQuotes.communn.company}`,
     rating: 5,
   },
   {
     id: "google-2",
     platform: "google",
-    quote:
-      "Delivered a clean, elegant website that perfectly matched my vision. Highly recommended for anyone looking for reliable web development support.",
-    name: "Vamsi Kalle",
-    role: "Author",
+    quote: clientQuotes.vamsi.quote,
+    name: clientQuotes.vamsi.name,
+    role: clientQuotes.vamsi.role,
     rating: 5,
   },
   {
     id: "linkedin-2",
     platform: "linkedin",
-    quote:
-      "Structured and dependable throughout. From implementation quality to technical support, the work strengthened our digital presence across both brands.",
-    name: "Sameeksha PN",
-    role: "Founder, Illumora",
+    quote: clientQuotes.illumora.quote,
+    name: clientQuotes.illumora.name,
+    role: `${clientQuotes.illumora.role}, ${clientQuotes.illumora.company}`,
     rating: 5,
   },
 ];

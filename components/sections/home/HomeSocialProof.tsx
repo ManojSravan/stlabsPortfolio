@@ -6,14 +6,14 @@ import { testimonials } from "@/lib/work";
 
 function ClientLogo({ name, logo }: { name: string; logo: string }) {
   return (
-    <div className="flex h-20 flex-1 min-w-[7rem] max-w-[11rem] items-center justify-center px-4 opacity-80 transition-opacity hover:opacity-100">
-      <div className="relative h-12 w-full">
+    <div className="flex h-28 flex-1 min-w-[9rem] max-w-[14rem] items-center justify-center px-4">
+      <div className="relative h-20 w-full">
         <Image
           src={logo}
           alt={`${name} logo`}
           fill
           className="object-contain"
-          sizes="190px"
+          sizes="224px"
         />
       </div>
     </div>

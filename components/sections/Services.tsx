@@ -70,7 +70,7 @@ export default function Services() {
             <span className="text-accent">software products.</span>
           </>
         }
-        description="Product engineering for ecommerce platforms, SaaS products, learning systems, and technical strategy—from MVP to scale."
+        description="Product engineering for ecommerce platforms, SaaS products, learning systems, and technical strategy, from MVP to scale."
       />
 
       <section>

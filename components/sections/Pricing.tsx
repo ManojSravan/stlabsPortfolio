@@ -2,115 +2,113 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import SectionShell from "@/components/layout/SectionShell";
 import { RevealAnimation } from "@/components/animations";
-import { headerCta } from "@/lib/site";
+import { headerCta, site } from "@/lib/site";
 
-const tiers = [
+type PricingTier = {
+  id: string;
+  name: string;
+  price: string;
+  period?: string;
+  description: string;
+  features: readonly string[];
+  cta: string;
+  href: string;
+  featured?: boolean;
+};
+
+const tiers: PricingTier[] = [
   {
-    id: "build",
-    label: "Tier 1",
-    name: "Build",
-    subtitle: "Product Development",
-    price: "$2,500–3,500",
-    priceNote: "Starting at",
-    period: null,
-    description:
-      "For founders validating a new product or rebuilding an existing one.",
-    features: [
-      "Product strategy session",
-      "UI/UX implementation",
-      "Full-stack development",
-      "Authentication & payments",
-      "CMS & third-party integrations",
-      "Deployment",
-      "4–8 week engagement",
-    ],
-    cta: "Build my product",
-    variant: "light" as const,
-  },
-  {
-    id: "grow",
-    label: "Tier 2",
-    name: "Grow",
-    subtitle: "Product Engineering Partner",
-    price: "$1,999",
-    priceNote: null,
+    id: "starter",
+    name: "Starter",
+    price: "$999",
     period: "/ month",
     description:
-      "For teams that already have a product and need continuous execution.",
+      "For founders shipping their first version or keeping a lean product moving without hiring in-house.",
     features: [
-      "Unlimited engineering requests",
-      "One active request at a time",
-      "Feature development",
-      "Bug fixes",
-      "Infrastructure & deployments",
-      "Technical advisory",
-      "Direct founder collaboration",
-      "Pause anytime",
+      "Dedicated engineering capacity",
+    "Continuous product development",
+    "Weekly planning & progress updates",
+    "Production deployment & maintenance",
+    "Pause or cancel anytime",
     ],
-    cta: "Become a partner",
-    variant: "dark" as const,
+    cta: "Get started",
+    href: headerCta.href,
   },
-] as const;
+  {
+    id: "growth",
+    name: "Growth",
+    price: "$1,999",
+    period: "/ month",
+    description:
+      "For teams with steady product momentum who need faster turnaround and closer collaboration.",
+    features: [
+      "Expanded engineering capacity",
+    "Priority feature delivery",
+    "Weekly product strategy calls",
+    "Production support & infrastructure",
+    "Priority response",
+    ],
+    cta: "Subscribe",
+    href: headerCta.href,
+    featured: true,
+  },
+  {
+    id: "dedicated-team",
+    name: "Dedicated Team",
+    price: "Custom",
+    description:
+      "For companies that need more capacity, parallel workstreams, or a deeper embedded partnership.",
+    features: [
+      "Dedicated engineering pod",
+  "Multiple parallel workstreams",
+  "Technical lead & delivery ownership",
+  "Architecture and scaling support",
+  "Custom SLAs and engagement model",
+    ],
+    cta: "Talk to us",
+    href: `mailto:${site.email}?subject=${encodeURIComponent("Dedicated Team pricing")}`,
+  },
+];
 
-function PricingCard({
-  tier,
-}: {
-  tier: (typeof tiers)[number];
-}) {
-  const isLight = tier.variant === "light";
+function PricingCard({ tier }: { tier: PricingTier }) {
+  const isFeatured = tier.featured === true;
+  const isExternal = tier.href.startsWith("http");
 
   return (
     <article
       className={
-        isLight
-          ? "flex h-full flex-col border border-border/80 bg-background text-foreground"
-          : "flex h-full flex-col border border-foreground/15 bg-foreground text-background"
+        isFeatured
+          ? "flex h-full flex-col border border-foreground/15 bg-foreground text-background"
+          : "flex h-full flex-col border border-border/80 bg-background text-foreground"
       }
     >
-      <div className="flex flex-1 flex-col p-8 md:p-10">
+      <div className="flex flex-1 flex-col p-6 md:p-8">
         <div>
+          {isFeatured ? (
+            <p className="text-[10px] uppercase tracking-[0.28em] text-background/55">
+              Most popular
+            </p>
+          ) : null}
+          <h3 className="mt-2 font-serif text-2xl tracking-tight">{tier.name}</h3>
           <p
             className={
-              isLight
-                ? "text-[10px] uppercase tracking-[0.28em] text-muted-foreground"
-                : "text-[10px] uppercase tracking-[0.28em] text-background/55"
-            }
-          >
-            {tier.label} · {tier.name}
-          </p>
-          <h3 className="mt-3 font-serif text-2xl md:text-3xl tracking-tight">
-            {tier.subtitle}
-          </h3>
-          <p
-            className={
-              isLight
-                ? "mt-4 text-sm leading-relaxed text-muted-foreground"
-                : "mt-4 text-sm leading-relaxed text-background/70"
+              isFeatured
+                ? "mt-3 text-sm leading-relaxed text-background/70"
+                : "mt-3 text-sm leading-relaxed text-muted-foreground"
             }
           >
             {tier.description}
           </p>
 
-          <div className="mt-8">
-            {tier.priceNote ? (
-              <p
-                className={
-                  isLight
-                    ? "text-xs uppercase tracking-[0.2em] text-muted-foreground"
-                    : "text-xs uppercase tracking-[0.2em] text-background/50"
-                }
-              >
-                {tier.priceNote}
-              </p>
-            ) : null}
-            <p className="mt-1 font-serif text-4xl md:text-5xl tracking-tight">
+          <div className="mt-6">
+            <p className="font-serif text-3xl md:text-4xl tracking-tight">
               {tier.price}
               {tier.period ? (
                 <span
                   className={
-                    isLight
-                      ? "ml-2 font-sans text-lg text-muted-foreground"
-                      : "ml-2 font-sans text-lg text-background/60"
+                    isFeatured
+                      ? "ml-2 font-sans text-base text-background/60"
+                      : "ml-2 font-sans text-base text-muted-foreground"
                   }
                 >
                   {tier.period}
@@ -120,50 +118,40 @@ function PricingCard({
           </div>
         </div>
 
-        <div className="mt-10 flex-1">
-          <p
-            className={
-              isLight
-                ? "text-[10px] uppercase tracking-[0.25em] text-muted-foreground"
-                : "text-[10px] uppercase tracking-[0.25em] text-background/45"
-            }
-          >
-            Includes
-          </p>
-          <ul className="mt-5 grid gap-3">
-            {tier.features.map((feature) => (
-              <li key={feature} className="flex gap-3 text-sm leading-relaxed">
-                <Check
-                  className={
-                    isLight
-                      ? "mt-0.5 size-4 shrink-0 text-accent"
-                      : "mt-0.5 size-4 shrink-0 text-[var(--accent-light)]"
-                  }
-                  aria-hidden
-                />
-                <span className={isLight ? "text-foreground/90" : "text-background/90"}>
-                  {feature}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="mt-8 flex-1 space-y-3">
+          {tier.features.map((feature) => (
+            <li key={feature} className="flex gap-3 text-sm leading-relaxed">
+              <Check
+                className={
+                  isFeatured
+                    ? "mt-0.5 size-4 shrink-0 text-[var(--accent-light)]"
+                    : "mt-0.5 size-4 shrink-0 text-accent"
+                }
+                aria-hidden
+              />
+              <span className={isFeatured ? "text-background/90" : "text-foreground/90"}>
+                {feature}
+              </span>
+            </li>
+          ))}
+        </ul>
 
         <div
           className={
-            isLight
-              ? "mt-10 border-t border-border/60 pt-8"
-              : "mt-10 border-t border-background/10 pt-8"
+            isFeatured
+              ? "mt-8 border-t border-background/10 pt-6"
+              : "mt-8 border-t border-border/60 pt-6"
           }
         >
           <Link
-            href={headerCta.href}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={tier.href}
+            {...(isExternal
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
             className={
-              isLight
-                ? "inline-flex w-full items-center justify-center bg-foreground px-6 py-3.5 text-sm text-background transition-colors hover:bg-accent sm:w-auto"
-                : "inline-flex w-full items-center justify-center border border-background/20 bg-background/10 px-6 py-3.5 text-sm text-background transition-colors hover:bg-background hover:text-foreground sm:w-auto"
+              isFeatured
+                ? "inline-flex w-full items-center justify-center border border-background/20 bg-background/10 px-6 py-3.5 text-sm text-background transition-colors hover:bg-background hover:text-foreground"
+                : "inline-flex w-full items-center justify-center bg-foreground px-6 py-3.5 text-sm text-background transition-colors hover:bg-accent"
             }
           >
             {tier.cta}
@@ -182,20 +170,24 @@ export default function Pricing() {
           Pricing
         </p>
         <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
-          Two ways to work with us.
+          Start lean. Scale when you&apos;re ready.
         </h2>
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          A two-tier model that matches how founders buy: ship a product first,
-          then keep momentum with ongoing engineering.
+          A flat monthly subscription for product development. Subscribe, discuss
+          what to build, and we ship it to production. No proposals, no agency
+          overhead.
         </p>
       </RevealAnimation>
 
       <RevealAnimation delay={0.1} className="mt-10">
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="grid gap-6 lg:grid-cols-3 lg:gap-5 xl:gap-6">
           {tiers.map((tier) => (
             <PricingCard key={tier.id} tier={tier} />
           ))}
         </div>
+        <p className="mt-6 text-center text-xs text-muted-foreground">
+          All plans pause or cancel anytime. No long-term lock-in.
+        </p>
       </RevealAnimation>
     </SectionShell>
   );

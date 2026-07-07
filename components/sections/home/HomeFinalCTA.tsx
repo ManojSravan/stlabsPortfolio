@@ -6,11 +6,11 @@ export default function HomeFinalCTA() {
     <section className="border-t border-border/60 bg-foreground text-background">
       <div className="mx-auto max-w-6xl px-6 py-16 md:py-20 text-center">
         <h2 className="font-serif text-3xl md:text-5xl leading-tight text-balance max-w-2xl mx-auto">
-          Ready to ship something that lasts?
+          Ready to build on subscription?
         </h2>
         <p className="mt-4 text-sm md:text-base text-background/70 max-w-lg mx-auto leading-relaxed">
-          Book a free intro call. We&apos;ll scope your idea, talk timelines,
-          and see if we&apos;re a good fit, with no pressure.
+          Subscribe, tell us what to ship, and we&apos;ll get to work. No
+          proposals, no pressure. Just a direct path from idea to production.
         </p>
         <Link
           href={headerCta.href}

@@ -35,13 +35,7 @@ export default function Founder() {
           >
             {founder.signature}
           </p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            <span className="text-foreground font-medium">{founder.name}</span>
-            <span className="mx-2 text-border" aria-hidden>
-              |
-            </span>
-            {founder.role}
-          </p>
+           
 
           <Link
             href={founder.ctaHref}

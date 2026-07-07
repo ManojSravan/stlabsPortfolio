@@ -15,20 +15,21 @@ export default function HomeHero() {
           <div>
             <RevealAnimation delay={0}>
               <h1 className="font-serif text-balance text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-[3.5rem]">
-                Your Product Deserves Better Engineering.
+                Your on-demand product studio.
               </h1>
             </RevealAnimation>
             
             <RevealAnimation delay={0.1}>
               <p className="mt-4 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed">
-                Launch your MVP in weeks, then keep shipping features through a
-                dedicated product engineering partnership.
+                Subscribe once. Tell us what to build. We design, engineer, and
+                ship it to production. No proposals, no agency overhead, no
+                nonsense.
               </p>
             </RevealAnimation>
            
            
             <RevealAnimation delay={0.25}>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap items-center gap-4">
                 <Link
                   href={headerCta.href}
                   target="_blank"
@@ -36,6 +37,12 @@ export default function HomeHero() {
                   className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 text-xs uppercase tracking-[0.18em] hover:bg-accent transition-colors"
                 >
                   {headerCta.label}
+                </Link>
+                <Link
+                  href="#pricing"
+                  className="inline-flex items-center gap-2 border border-border px-8 py-4 text-xs uppercase tracking-[0.18em] text-foreground hover:border-accent hover:text-accent transition-colors"
+                >
+                  View pricing
                 </Link>
               </div>
             </RevealAnimation>

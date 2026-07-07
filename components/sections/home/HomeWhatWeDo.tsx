@@ -1,40 +1,28 @@
-import {
-  Code2,
-  Layers,
-  Rocket,
-  RefreshCw,
-  type LucideIcon,
-} from "lucide-react";
+import { MessageSquare, Rocket, CreditCard, type LucideIcon } from "lucide-react";
 import SectionShell from "@/components/layout/SectionShell";
 
-const features: {
+const steps: {
   icon: LucideIcon;
   title: string;
   description: string;
 }[] = [
   {
-    icon: Layers,
-    title: "Product design",
+    icon: CreditCard,
+    title: "Subscribe",
     description:
-      "User flows and interfaces shaped before code, so you launch with clarity, not guesswork.",
+      "One monthly plan that fits where you are today. Onboard quickly, add requests to your queue, and get building without proposals or procurement cycles.",
   },
   {
-    icon: Code2,
-    title: "Full-stack engineering",
+    icon: MessageSquare,
+    title: "Discuss",
     description:
-      "Next.js, React, and modern backends built with architecture that scales as you grow.",
+      "Tell us what you need on a kickoff call. We align on scope, priorities, and technical direction, then get to work.",
   },
   {
     icon: Rocket,
-    title: "Ship to production",
+    title: "Ship",
     description:
-      "MVPs and full products deployed, tested, and ready for real users from day one.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Iterate & advise",
-    description:
-      "Stack decisions, rebuilds, and technical direction when the stakes are high.",
+      "We design, build, and deploy to production. When one request ships, we pick up the next. Repeat as often as you need.",
   },
 ];
 
@@ -43,19 +31,19 @@ export default function HomeWhatWeDo() {
     <SectionShell id="services" className="scroll-mt-28" variant="muted">
       <div className="text-center max-w-2xl mx-auto">
         <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          What you get
+          How it works
         </p>
         <h2 className="font-serif text-3xl md:text-4xl mt-4 text-balance">
-          One team across the full stack.
+          Subscribe. Discuss. Ship.
         </h2>
         <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed">
-          Design, engineering, and delivery in one place. No handoffs, no
-          account managers. Just direct collaboration on your product.
+          An on-demand product studio with no agency overhead. No bloated
+          process. Just a direct line to the engineer building your product.
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {features.map(({ icon: Icon, title, description }) => (
+      <div className="mt-12 grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+        {steps.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
             className="group border border-border/60 bg-background p-6 md:p-7 transition-colors hover:border-accent/40"

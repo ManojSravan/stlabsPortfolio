@@ -18,17 +18,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sravantechlabs.com"),
 
   title: {
-    default: "Sravan Tech Labs | Product Engineering Studio",
+    default: "Sravan Tech Labs | On-Demand Product Studio",
     template: "%s | Sravan Tech Labs",
   },
 
   description:
-    "Sravan Tech Labs partners with early-stage founders to design, build, and continuously improve SaaS products—from MVP to scale.",
+    "An on-demand product studio for founders. Subscribe, discuss what to build, and we ship it to production without agency overhead.",
 
   keywords: [
     "Sravan Tech Labs",
     "Manoj Sravan",
-    "Product Engineering Studio",
+    "On-Demand Product Studio",
+    "Product Development Subscription",
     "Product Engineer",
     "MVP Development",
     "SaaS Development",
@@ -56,10 +57,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Sravan Tech Labs | Product Engineering Studio",
+    title: "Sravan Tech Labs | On-Demand Product Studio",
 
     description:
-      "Product engineering studio partnering with early-stage founders to design, build, and continuously improve SaaS products—from MVP to scale.",
+      "Subscribe to an on-demand product studio. Tell us what to build, we design, engineer, and ship it to production.",
 
     url: "https://sravantechlabs.com",
 
@@ -82,10 +83,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Sravan Tech Labs | Product Engineering Studio",
+    title: "Sravan Tech Labs | On-Demand Product Studio",
 
     description:
-      "Product engineering studio helping founders build and scale software products—from MVP to production.",
+      "An on-demand product studio. Subscribe, discuss, and ship. Software development without the agency runaround.",
 
     images: ["/og-image.png"],
 
@@ -127,7 +128,7 @@ export default function Index() {
     worksFor: {
       "@type": "Organization",
       name: "Sravan Tech Labs",
-      description: "Product Engineering Studio",
+      description: "On-Demand Product Studio",
       url: siteUrl,
     },
     email: "hello@sravantechlabs.com",
@@ -151,7 +152,7 @@ export default function Index() {
       "https://github.com/sravantechlabs",
     ],
     description:
-      "Founder of Sravan Tech Labs, a product engineering studio helping founders bring software from idea to production.",
+      "Founder of Sravan Tech Labs, an on-demand product studio helping founders build software through a simple monthly subscription.",
   };
 
   const websiteSchema = {
@@ -181,12 +182,11 @@ export default function Index() {
       <HomeProductCarousel />
       <HomeSocialProof />
       <HomeWhatWeDo />
+      <Pricing />
       <RecentWork />
       <Founder />
-      <Pricing />
-      <RecentBlogs />
-      <HomeFAQs />
       <HomeSocialTestimonials />
+      <HomeFAQs />
       <HomeFinalCTA />
     </>
   );

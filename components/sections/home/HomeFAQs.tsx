@@ -11,24 +11,24 @@ import { RevealAnimation } from "@/components/animations";
 
 const pricingFaqs = [
   {
-    q: "Can I cancel the retainer anytime?",
-    a: "Yes. Monthly retainers have no long-term lock-in. Give notice before the next billing cycle and we&apos;ll wrap up cleanly with documentation handoff.",
+    q: "How is this different from hiring an agency?",
+    a: "No proposals, no project managers, no change orders. You subscribe, add requests, and we build. One flat fee covers design, engineering, and deployment.",
   },
   {
-    q: "Is my data and code secure?",
-    a: "Your code lives in your repositories, deployed on your infrastructure. We follow standard security practices: encrypted connections, no third-party data sharing, and NDA on request.",
+    q: "What counts as one request?",
+    a: "A request is a discrete piece of work: a feature, a landing page, a bug fix, an integration. We scope it together on a quick call, then ship it before moving to the next one in your queue.",
   },
   {
-    q: "What if the scope changes mid-project?",
-    a: "Scope changes happen. We discuss the impact on timeline and cost upfront before any extra work begins, with no surprise invoices.",
+    q: "Can I pause or cancel anytime?",
+    a: "Yes. Pause when you don't need active development, or cancel before the next billing cycle. No long-term lock-in.",
+  },
+  {
+    q: "Is my code and data secure?",
+    a: "Your code lives in your repositories, deployed on your infrastructure. We follow standard security practices and sign NDAs on request.",
   },
   {
     q: "Do you work with non-technical founders?",
     a: "Most clients are domain experts, not engineers. We translate business goals into clear product requirements and keep you informed without jargon.",
-  },
-  {
-    q: "How do payments work?",
-    a: "MVP builds are milestone-based: you pay as each phase ships. Retainers are billed monthly. International payments accepted via bank transfer or Stripe.",
   },
 ] as const;
 
