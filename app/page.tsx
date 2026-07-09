@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import RecentBlogs from "@/components/sections/RecentBlogs";
-import RecentWork from "@/components/sections/RecentWork";
-import Pricing from "@/components/sections/Pricing";
-import Founder from "@/components/sections/Founder";
+ import RecentWork from "@/components/sections/RecentWork";
+ import Founder from "@/components/sections/Founder";
 import HomeFAQs from "@/components/sections/home/HomeFAQs";
 import HomeFinalCTA from "@/components/sections/home/HomeFinalCTA";
 import HomeHero from "@/components/sections/home/HomeHero";
@@ -182,7 +180,7 @@ export default function Index() {
       <HomeProductCarousel />
       <HomeSocialProof />
       <HomeWhatWeDo />
-      <Pricing />
+      
       <RecentWork />
       <Founder />
       <HomeSocialTestimonials />
